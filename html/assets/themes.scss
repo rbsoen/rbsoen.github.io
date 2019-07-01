@@ -1,0 +1,56 @@
+@import '../../css/colors';
+
+$theme-color: $teal;
+
+.blue {@include set-colors($blue);}
+
+.green {@include set-colors($green);}
+
+.red {@include set-colors($red);}
+
+.card-margin {margin:8px;}
+
+.card-size {@extend .card-margin;padding:16px;overflow:hidden;}
+
+.fixedbtn {width:48px;height:48px;line-height: 1.7;}
+
+.uitheme {
+  font-family: 'Roboto', sans-serif;
+  max-width:100%;
+  overflow-x: auto;
+  .uinav{
+    @include set-colors(#111);
+    height:32px;
+  }
+  .uimain{
+    @include set-colors(#444);
+    width:360px;
+    height:640px;
+      margin:auto;
+  }
+  .uitab{
+    margin: 0 1em;
+    padding-bottom:4px;
+    position: relative;
+    top:-5px;
+    &-active{
+      @extend .uitab;
+      border-bottom:2px solid white;
+    }
+  }
+  *{font-family: 'Roboto', sans-serif;}
+}
+
+.icon{
+  width:100px;
+  height:100px;
+  box-shadow: 0 2px 6px black;
+}
+
+.light {@include set-colors(lighten($theme-color, 10%));}
+
+.theme {@include set-colors($theme-color);}
+
+.dark {@include set-colors(darken($theme-color, 20%));}
+
+.hover:hover {@include set-colors(#f44336);}
