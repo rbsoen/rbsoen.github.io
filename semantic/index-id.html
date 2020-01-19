@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Elements</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+    <link rel="stylesheet" media="screen,tv" type="text/css" href="screen.css">
+    <!-- maaf pakai cdn + webfont, pengen cepet kelar-->
+    <link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css">
+  </head>
+  <body>
+    <nav id="mainNav">
+      <h1><a href="#">2020chic</a></h1>
+      <!-- ribet ya bikin hamburger menu-->
+      <label for="toggleHamburger" hidden>&#9776;</label>
+      <input id="toggleHamburger" type="checkbox" hidden>
+      <ul id="mainMenu">
+        <li><a href="#basic-elements">Komponen</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i><span class="menuExpanded">Twitter</span></a></li>
+        <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i><span class="menuExpanded">Facebook</span></a></li>
+        <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i><span class="menuExpanded">Instagram</span></a></li>
+      </ul>
+    </nav>
+    <section id="hero">
+      <div class="background-overlay"></div>
+      <div class="section-container">
+        <h2>Semantik dan Modern</h2>
+        <p>
+          Simpel aja, nggak perlu ribet-ribet pakai framework atau scripting.Bisa langsung HTML + CSS atau pake preprocessor (Jade + Sass).</p><a class="button" href="#">Yuk Ikutan</a>
+      </div>
+    </section>
+    <section id="basic-elements">
+      <div class="section-container">
+        <h2>Elemen Dasar</h2>
+        <h3>Tombol</h3>
+        <p>Belum komplit.</p>
+        <ul class="buttonList">
+          <li><a class="button" href="#"><span><i class="fa fa-bolt"></i> Tombol (tautan)</span></a></li>
+          <li><a class="button-cta" href="#"><span><i class="fa fa-heart"></i> Tombol utama (tautan)</span></a></li>
+          <li>
+            <button>Tombol (event/aksi)</button>
+          </li>
+          <li>
+            <button class="button-cta">Tombol utama (event/aksi)</button>
+          </li>
+        </ul>
+        <h3>Isian</h3>
+        <h4>Input</h4>
+        <div class="row">
+          <div class="column">
+            <label>
+              <input type="text" placeholder="Jangan taruh teks di placeholder!">
+              <div class="floating-disclaimer">Kalo teksnya di placeholder ntar nggak kelihatan</div>
+            </label>
+            <p>
+              Taruh aja di elemennya sendiri, bisa diatur kok.
+              Pastikan ada ruang di atas input.
+            </p>
+          </div>
+          <div class="column">
+            <label for="inputFloaty">
+              <input id="inputFloaty" type="text" placeholder=" "><span class="floating-placeholder">Input tanpa catatan</span>
+            </label>
+            <label for="inputFloaty2">
+              <input id="inputFloaty2" type="text" placeholder=" "><span class="floating-placeholder">Input dengan catatan.</span>
+              <div class="floating-disclaimer">NB: Testing terus</div>
+            </label>
+          </div>
+        </div>
+        <h4>Checkboxes</h4>
+        <div class="row">
+          <div class="column">
+            <label for="chk1">
+              <input id="chk1" type="checkbox"><span>Klik disini</span>
+            </label>
+            <label for="chk2">
+              <input id="chk2" type="checkbox" checked><span>Klik disini</span>
+            </label>
+          </div>
+          <div class="column">
+            <label for="chk3">
+              <input id="chk3" type="checkbox" disabled><span>Jangan klik disini</span>
+            </label>
+            <label for="chk4">
+              <input id="chk4" type="checkbox" disabled checked><span>Jangan klik disini</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="advantages">
+      <div class="section-container">
+        <h2>Keuntungan Metode Ini</h2>
+        <p>Website lebih aksesibel dan teratur.</p>
+        <p>
+          <em>Semantik</em> artinya memiliki makna. Semantik disini artinya kode HTML bukan
+           hanya lempar <code>div</code> dan <code>span</code> seenaknya, namun
+           jika diperlukan saja. Kemudian tag-tag heading atau judul itu
+           terstruktur sebagaimana membuat sebuah karangan / paper biasa, bukan hanya
+           gara-gara teksnya saja yang gede.
+           Ini bukan cuma untuk keperluan SEO namun juga aksesibilitas, sebab
+           informasi-informasi ini penting untuk diketahui oleh alat macam
+           <i>screen-reader</i>.
+        </p>
+        <p>
+           Karena sifat penamaan class CSS yang deskriptif (menjelaskan isi class yang digunakan)
+           ketimbang presentatif (menjelaskan tampilan), diharapkan dapat menjadi
+           lebih mudah untuk mengganti tampilan sebab kode HTML tidak tergantung
+           pada kode CSS. Alasan inilah yang menyebabkan HTML dan CSS menjadi
+           teknologi terpisah yang saling melengkapi.
+        </p>
+        <p>
+           Script digunakan untuk <i>melengkapi</i> tampilan dan fungsi website.
+           Pada demo ini, script hanya berfungsi untuk mengubah tampilan navbar.
+           Secara default, navbar yang ditampilkan tidak terlihat transparan,
+           sehingga masih dapat terbaca dalam suasana tanpa javascript.
+        </p>
+        <p>
+           Tampilannya modern, sesuai dengan tren yang sedang berkembang pada
+           tahun 2020. Mendukung dark mode yang tersedia pada Chrome versi 74 ke
+           atas serta Firefox terbaru. Bersifat responsif tanpa ada script tambahan.
+        </p>
+        <p>Demo ini belum selesai, bersifat <em>proof of concept.</em></p>
+        <blockquote>
+          <p>
+             Penggunaan kelas presentatif tak ada bedanya dengan praktik
+             membuat website pada tahun 90-an.
+          </p>
+          <footer>Jason Knight</footer>
+        </blockquote>
+      </div>
+    </section>
+    <script type="text/javascript">
+      	// noscript tidak membuat website sulit dilihat
+      	var scroll = false;
+        var scrollLevel = 0
+      	var nav = document.getElementById("mainNav");
+      	nav.classList.add("topofpage");
+      	window.onscroll = function(){
+      		scroll = true;
+        }
+        setInterval( function() {
+      		scrollLevel = window.scrollY;
+      		if ( scroll ) {
+      			if ( scrollLevel >= 10 ){
+      				nav.classList.remove("topofpage");
+      			} else {
+      				nav.classList.add("topofpage");
+      			}
+      		}
+      		scroll = false;
+        }, 250);
+    </script>
+  </body>
+</html>
