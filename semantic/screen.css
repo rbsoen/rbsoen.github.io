@@ -391,6 +391,7 @@ blockquote footer:before {
     left: -99em;
     padding: 0 3em;
     background-color: #fff;
+    color: #222;
     height: 100vh;
     overflow-y: scroll;
     box-shadow: 8px 0 8px rgba(0, 0, 0, 0.3);
@@ -421,5 +422,6 @@ blockquote footer:before {
 @media (prefers-color-scheme: dark) and (max-width: 40em) {
   ul#mainMenu {
     background-color: #111;
+    color: #fff;
   }
 }
