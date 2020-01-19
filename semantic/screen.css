@@ -1,0 +1,420 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/ttf/Manrope-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+}
+/* box model */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* classic reset */
+html, body, address, blockquote, div,
+form, fieldset, caption,
+h1, h2, h3, h4, h5, h6,
+hr, ul, li, ol, ul,
+table, tr, td, th, p, img {
+  margin: 0;
+  padding: 0;
+}
+
+/* presentational row & column layout classes */
+.row {
+  display: table;
+}
+
+.column {
+  display: table-cell;
+  width: 50%;
+  padding-right: 1em;
+}
+
+/* default styles */
+body {
+  font-family: "Manrope", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+  line-height: 1.8;
+}
+
+code {
+  font-family: "Victor Mono", "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: inherit;
+  background-color: #eee;
+  padding: 5px;
+}
+
+h4, h3, h2, h1 {
+  padding: 8px 0;
+  padding: 0.5rem 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+h2 + p {
+  /* lead paragraph */
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* navigation styles */
+#mainNav {
+  background: #fff;
+  color: #222;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 48px;
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: 0.5s;
+}
+#mainNav.topofpage {
+  /* activated when javascript is on */
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  min-height: 6em;
+}
+#mainNav a {
+  color: inherit;
+}
+#mainNav h1 {
+  font-size: 1em;
+  padding: 0;
+}
+
+ul#mainMenu {
+  list-style: none;
+  display: table;
+  display: flex;
+}
+ul#mainMenu li {
+  padding: 0 1.5em;
+  display: table-cell;
+}
+
+#toggleHamburger, [for=toggleHamburger] {
+  display: none;
+}
+
+.menuExpanded {
+  display: none;
+}
+
+/* section styles */
+section:before {
+  /* fix anchoring */
+  content: "";
+  padding-top: 4em;
+  margin-top: -4em;
+  display: block;
+}
+
+.section-container {
+  /* to center the content */
+  padding: 1em 2em;
+  max-width: 60em;
+  margin: auto;
+}
+
+/* per-section styles*/
+#hero {
+  background-color: blue;
+  background-image: url("assets/pexels-photo-597933.jpeg");
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 8em 0;
+  display: table;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* hero specific cta */
+}
+#hero h2 {
+  font-size: 3.5em;
+  font-weight: 500;
+}
+#hero .background-overlay {
+  background-color: #01a;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+#hero .section-container {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  color: #fff;
+}
+#hero p, #hero span {
+  max-width: 40em;
+  font-size: 1.1em;
+  margin: auto;
+  opacity: 0.6;
+}
+#hero .button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  font-weight: 800;
+  font-size: 1em;
+}
+
+/* button styles */
+.buttonList {
+  list-style: none;
+}
+.buttonList li {
+  display: inline-block;
+}
+
+.button-cta, button, .button {
+  padding: 0.75em 1.875em;
+  display: inline-block;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-family: inherit;
+}
+
+button, .button {
+  color: #222;
+  background-color: #eee;
+}
+
+.button-cta {
+  color: #fff;
+  background-color: #37a;
+}
+
+/* input styles */
+label {
+  /* this acts as a container */
+  margin: 1em 0 1em 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+label > * {
+  display: inline-block;
+}
+label span {
+  margin-left: 0.3em;
+}
+
+.floating-placeholder {
+  /* floating input styles, continued in input:placeholder-shown */
+  cursor: text;
+  position: absolute;
+  margin-left: 0;
+  transition: 0.3s;
+  opacity: 0.8;
+  /* active state by default */
+  top: -1.6em;
+  left: 0;
+  font-size: 0.8em;
+}
+
+.floating-disclaimer {
+  /* floating input styles, continued in input:placeholder-shown */
+  cursor: text;
+  display: block;
+  position: absolute;
+  width: 100%;
+  transition: 0.3s;
+  font-size: 0.8em;
+  padding-top: 1em;
+  /* active state by default */
+  top: 1.5em;
+  opacity: 1;
+}
+
+input[type=text] {
+  cursor: text;
+  width: 100%;
+  font: inherit;
+  min-height: 1em;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 2px solid grey;
+}
+input[type=text]:placeholder-shown ~ .floating-disclaimer {
+  top: 1em;
+  opacity: 0;
+}
+input[type=text]:placeholder-shown ~ .floating-placeholder {
+  top: 0;
+  font-size: 1em;
+}
+input[type=checkbox] {
+  /* checkboxes are really tricky */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  background-color: #fff;
+  border: 1px solid #067;
+  border-radius: 4px;
+  position: relative;
+  transition: 0.4s;
+  cursor: pointer;
+}
+input[type=checkbox]:disabled {
+  opacity: 0.4;
+}
+input[type=checkbox]:before {
+  content: "✓";
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  transition: 0.2s;
+  transform: scaleY(0);
+}
+input[type=checkbox]:checked {
+  background-color: #067;
+}
+input[type=checkbox]:checked:before {
+  font-size: 1em;
+  transform: scaleY(1);
+}
+
+blockquote {
+  border-left: 4px solid #88c;
+  padding: 1em;
+  margin-left: 1em;
+  background-color: #ddd;
+}
+blockquote footer {
+  text-align: right;
+}
+blockquote footer:before {
+  content: "—";
+}
+
+@media (max-width: 40em) {
+  .menuExpanded {
+    display: inline-block;
+    margin: 0 0.5em;
+  }
+
+  [for=toggleHamburger] {
+    display: block;
+  }
+
+  #toggleHamburger:checked + ul#mainMenu {
+    max-height: 999em;
+    left: 0;
+    transition: left 0.5s cubic-bezier(0, 1, 0, 1);
+  }
+
+  ul#mainMenu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -99em;
+    padding: 0 3em;
+    background-color: inherit;
+    height: 100vh;
+    overflow-y: scroll;
+    box-shadow: 8px 0 8px rgba(0, 0, 0, 0.3);
+    transition: left 0.5s ease-in-out;
+  }
+  ul#mainMenu li {
+    padding: 1em 0;
+    display: block;
+  }
+}
+@media (max-width: 50em) {
+  .row, .column {
+    display: block;
+    width: 100%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  input, #mainNav, body {
+    background-color: #111;
+    color: #fff;
+  }
+
+  blockquote, code {
+    color: #eee;
+    background-color: #223;
+  }
+}
