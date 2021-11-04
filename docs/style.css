@@ -63,6 +63,7 @@ body {
   color: #fff;
   background: #222;
   font-family: var(--body-font), Arial, sans-serif;
+  font-size: 1.05em;
 }
 
 .top-bar {
@@ -109,8 +110,8 @@ body {
 
 .intro-header p {
   width: 100%;
-  padding: 6em 0 14em 15em;
-  max-width: 50em;
+  padding: 6em 0 14em 8em;
+  max-width: min(60em, 55%);
 }
 
 .intro-header .lead-text {
@@ -132,11 +133,12 @@ body {
   font-size: 2em;
   max-width: 10em;
   display: block;
-  letter-spacing: -.02em;
+  letter-spacing: .01em;
+  line-height: 1.3em;
 }
 
 section {
-  padding: 5em 15em;
+  padding: 5em 8em;
 }
 
 @media screen and (max-width: 70em) {
@@ -453,4 +455,28 @@ footer {
   text-align: center;
   line-height: 1.7em;
   padding: 1em;
+}
+.header-actions {
+  display: inline-block;
+}
+.fake-button {
+  background-color: #048;
+  opacity: 1;
+  display: block;
+  text-align: center;
+  margin: 1em;
+  margin-left: 0;
+  padding: .5em 1em;
+  border-radius: 10em;
+  text-decoration: none;
+  border: 1px solid #08f;
+  position: relative;
+  top:0;
+  left:0;
+  transition: .3s all;
+}
+.fake-button:hover {
+  box-shadow: .4em .4em 0 0 #08f;
+  top:-.4em;
+  left:-.4em;
 }

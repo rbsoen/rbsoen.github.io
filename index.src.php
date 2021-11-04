@@ -47,6 +47,10 @@ require_once "featured_works.php"
     				multimedia designer and aspiring
     				software creator.
     			</b>
+					<span class="header-actions">
+						<a href="#s-work" class="fake-button">See my work here.</a>
+						<a href="experiments/" class="fake-button">See my front-end experiments.</a>
+					</span>
     		</p>
 		</header>
 		<section id="s-about" class="separated" style="background: var(--about-bg);">
@@ -79,8 +83,7 @@ require_once "featured_works.php"
     			efficiency and speed.
     		</p>
     		<p>
-    			See also my <a href="cv/CV English.pdf">CV</a>. This web page is currently under
-					construction!
+    			See also my <a href="cv/CV English.pdf">CV</a>.
     		</p>
     	</section>
 
@@ -208,27 +211,15 @@ require_once "featured_works.php"
         		</div>
         		<div class="grid-block">
             		<h3 style="--icon-image: var(--web-icon);">Web Development</h3>
-            		<br>
-            		<h4>Design / Concepts</h4>
             		<p>
             			My design work can extend to the web as well, creating
             			modern and easy-to-access web applications and sites.
-            		</p>
-            		<h4>PHP</h4>
-            		<p>
-            			For the web, I prefer using this language as it is
-            			established and simple to understand for me.
-            		</p>
-            		<h4>HTML, CSS, JS</h4>
-            		<p>
-            			When it comes to web technologies, I prefer simplicity
-            			while striving for accessibility.
+									Aside from HTML and CSS, I am currently programming in
+									<strong>PHP</strong>, and slowly improving my Javascript.
             		</p>
         		</div>
         		<div class="grid-block">
             		<h3 style="--icon-image: var(--programming-icon);">Application Development</h3>
-            		<br>
-            		<h4>Python</h4>
             		<p>
             			I frequently use Python to assist me in doing my work.
 									As a result, I am somewhat proficient in using it to do
@@ -271,8 +262,11 @@ require_once "featured_works.php"
     		<address class="email">
     			rbsoenoto [at] gmail [dot] com
     		</address>
+    		<address class="email">
+    			rodriguez.breil [at] ui [dot] ac [dot] id
+    		</address>
     		<address class="github">
-    			rbsoen (still a work in progress)
+    			<a href="https://github.com/rbsoen">rbsoen</a>
     		</address>
 		</section>
 
