@@ -16,6 +16,7 @@ require_once "featured_works.php"
 	<body>
 		<div class="top-bar">
     		<h1>rbsoen</h1>
+				<div id="mobile-menu-hook"></div>
     		<nav id="main-menu">
         		<ul>
         			<li><a href="#s-home">Home</a></li>

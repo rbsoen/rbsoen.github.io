@@ -274,6 +274,42 @@ section h2:after {
 }
 
 @media screen and (max-width: 40em) {
+  .top-bar {
+    padding: .1em 1em;
+    justify-content: space-between;
+  }
+  #mobile-menu-hook:after {
+    content: "Menu";
+    background: #333;
+    height: 3em;
+    width: 5em;
+    display: block;
+    line-height: 3em;
+    text-align: center;
+  }
+  #mobile-menu-hook + #main-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    top:2.8em;
+    line-height: 3em;
+    text-align: right;
+    max-height: .2em;
+    overflow: hidden;
+  }
+  #mobile-menu-hook + #main-menu li {
+    display: block;
+    margin-right: 1em;
+  }
+  #mobile-menu-hook:hover + #main-menu,
+  #main-menu:hover{
+    max-height: 999em !important;
+  }
+  
   .has-grid {
     display: grid;
     grid-template-columns: 1fr;
