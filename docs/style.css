@@ -63,7 +63,7 @@ body {
   color: #fff;
   background: #222;
   font-family: var(--body-font), Arial, sans-serif;
-  font-size: 1.05em;
+  font-size: 1.1em;
 }
 
 .top-bar {
@@ -75,10 +75,8 @@ body {
   width: 100%;
   padding: 1em 2em;
   height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   z-index: 999;
+	align-items: center;
 }
 
 .top-bar h1 {
@@ -94,10 +92,10 @@ body {
   color: inherit;
 }
 
-#s-home {
+#s-home ._contents {
   background-image: url(icons/me.png);
   background-repeat: no-repeat;
-  background-position: 80% bottom;
+  background-position: 100% bottom;
   background-size: 30em;
 }
 
@@ -110,7 +108,7 @@ body {
 
 .intro-header p {
   width: 100%;
-  padding: 6em 0 14em 8em;
+  padding: 6em 0 14em 2em;
   max-width: min(60em, 55%);
 }
 
@@ -515,4 +513,17 @@ footer {
   box-shadow: .4em .4em 0 0 #08f;
   top:-.4em;
   left:-.4em;
+}
+
+* ._contents {
+	max-width: 80em;
+	margin: auto;
+}
+
+.top-bar ._contents {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	max-width: 80em;
+	margin: auto;
 }
