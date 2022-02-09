@@ -33,7 +33,7 @@
     }
 
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       padding: 2em 10%;
       line-height: 1.7em;
     }
@@ -67,7 +67,7 @@
       box-shadow: 0 .5em 1em rgba(0,0,128,.1);
       transition: .5s all;
       position: relative;
-      margin: .5em;
+      margin: .5em 0;
     }
 
     a {
@@ -88,6 +88,46 @@
 
     img {
      margin: auto;
+     display: block;
+     margin-bottom: 1em;
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .card-content > div:first-of-type {
+        flex-grow: 0;
+        min-width:  12em;
+        max-width:  12em;
+    }
+
+    @media screen and (max-width: 50em) {
+        .card-content {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+        body {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .card {
+            background-color: #444;
+            color: #ddd;
+        }
+
+        a:hover {
+          text-shadow: .1em .1em 0 rgba(199,199,255,.2);
+          box-shadow: 0 0 0 3px rgba(199,199,255,.4);
+          padding: 3px;
+          margin: -3px;
+        }
     }
 
     </style>
@@ -110,56 +150,68 @@
     <p>
       Not only that, I also try to use graceful degradation by making sure
       the page would still be visible in browsers that do not support
-      Javascript (or have it deliberately disabled for security reasons) -
-      there are no loading screens baked into the HTML nor are any of the
-      elements are hidden by "default".
+      Javascript (or have it deliberately disabled for security reasons).
     </p>
     <div class="card-list">
-      <section class="card">
+      <article class="card">
+        <h2><a href="activity_manager">Activity Logger</a></h2>
+        <div class="card-content">
+                <div>
+                    <img src="activity_manager/preview.png" alt="Screenshot of the XHTML in 2021 experiment.">
+                </div>
+                <div>
+                  <p>
+                    This is a pure web application that is the exception
+                    to the should-not-have-Javascript rule, because it is
+                    completely client-side using <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>
+                    to store information.
+                    Because it uses IndexedDB, all data is stored inside the
+                    specific profile of the specific browser that it is accessed
+                    in.
+                  </p>
+                  <p>
+                    All forms are pre-rendered in the HTML, and then shown, hidden,
+                    and manipulated using vanilla JavaScript - of which a relatively
+                    minimal amount is used. The total amount of code in its source
+                    form (including external libraries) is about 32 kb.
+                    The code is not the most optimal, and there are a few bugs (such as
+                    submit actions working, but not when pressing "Enter"), however
+                    I believe it serves my personal needs well for now.
+                  </p>
+              </div>
+          </div>
+      </article>
+      <article class="card">
         <h2><a href="xhtml_motion_test">XHTML in 2021</a></h2>
-          <p>
-            This is a modern landing page, but it's written using valid
-            XHTML 1.1 Strict &mdash; a form of HTML most people have left behind.
-            Even so, this makes use of relatively modern
-            CSS features (custom properties, chrome's <var>backdrop-filter</var>)
-            as well as some of the more recent JS features.
-          </p>
-          <p>
-            Through this page I discovered the difference in how the browser
-            handles <var>Content-Type</var>. Using <code>application/xhtml+xml</code>,
-            with an "xhtml" extension, the page is rendered using the XML renderer.
-            The CSS <em>does not</em> block
-            renders here. The usual <code>text/html</code> on the other hand, will
-            block rendering until the CSS is fully loaded.
-            In my opinion, that might be another reason why people apply the content
-            type of <code>text/html</code> even if technically it's only possible
-            <a href="https://www.w3.org/2003/01/xhtml-mimetype/">for compatibility</a>.
-          </p>
-          <p>
-            I have also experimented with another way to express the relationship
-            between markup and style &mdash; even though it may be the opposite of good
-            practices &mdash; for the purpose of exploring CSS selectors.
-            Proper IDs are used whenever an anchor is needed. The convention
-            used there is as follows:
-            <ul>
-              <li>"Global" classes ("objects") are not prefixed</li>
-              <li>"Local" classes, that is, parts inside an object are prefixed with <code>-</code></li>
-              <li>Utility classes for Javascript hooks and such are prefixed with <code>_</code></li>
-            </ul>
-          </p>
-          <p>
-            The usual problem lies with specificity, but it may be improved by making
-            the CSS reflect the markup order in the HTML, at the cost of possibly
-            separating otherwise related markup. Not only that, there is also
-            the problem of over-using the non-semantic <code>&lt;div&gt;</code> tag, a problem
-            solved in HTML5 with the various additional tags such as <code>&lt;section&gt;</code>,
-            <code>&lt;nav&gt;</code>, among others.
-          </p>
-          <img src="xhtml_motion_test/preview.png" alt="Screenshot of the XHTML in 2021 experiment.">
-      </section>
-      <section class="card">
+        <div class="card-content">
+            <div>
+                <img src="xhtml_motion_test/preview.png" alt="Screenshot of the XHTML in 2021 experiment.">
+            </div>
+            <div>
+              <p>
+                This is a modern landing page, but it's written using valid
+                XHTML 1.1 Strict &mdash; a form of HTML most people have left behind.
+                Even so, this makes use of relatively modern
+                CSS features (custom properties, chrome's <var>backdrop-filter</var>)
+                as well as some of the more recent JS features.
+              </p>
+              <p>
+                Through this page I discovered the difference in how the browser
+                handles <var>Content-Type</var>. Using <code>application/xhtml+xml</code>,
+                with an "xhtml" extension, the page is rendered using the XML renderer.
+                The CSS <em>does not</em> block
+                renders here. The usual <code>text/html</code> on the other hand, will
+                block rendering until the CSS is fully loaded.
+                In my opinion, that might be another reason why people apply the content
+                type of <code>text/html</code> even if technically it's only possible
+                <a href="https://www.w3.org/2003/01/xhtml-mimetype/">for compatibility</a>.
+              </p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
         <h2>To be continued</h2>
-      </section>
+    </article>
     </div>
   </body>
 </html>
