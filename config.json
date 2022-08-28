@@ -90,13 +90,15 @@
 			"addrcaption": "Contact:",
 			"viewcaption": "View in English",
 			"languagename": "English",
-			"readmore": "Read on..."
+			"readmore": "Read on...",
+			"contentDir": "content/en"
 		},
 		"id": {
 			"addrcaption": "Hubungi:",
 			"viewcaption": "Lihat dalam Bahasa Indonesia",
 			"languagename": "Indonesia",
-			"readmore": "Selengkapnya..."
+			"readmore": "Selengkapnya...",
+			"contentDir": "content/id"
 		}
 	}
 }

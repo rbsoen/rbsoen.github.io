@@ -4,7 +4,7 @@
 		<ul>
 			<li><a href="#main-menu">Open main menu</a></li>
 			{{ range .Site.Menus.main }}
-			<li><a href="{{ .URL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>
+			<li><a href="{{ .URL | relLangURL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>
 			{{ end }}
 			<li><a href="#top" class="_close-menu">Close menu</a></li>
 			<li class="dark-toggle" hidden aria-hidden="true">
