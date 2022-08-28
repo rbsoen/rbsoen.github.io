@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Activity Manager</title>
+        <link rel="stylesheet" href="index.css" media="screen">
+        <!-- library -->
+        <script src="vendor/elementalsMini.js"></script>
+        <script src="vendor/strftime.js"></script>
+        <!-- app -->
+        <script src="common.js" defer></script>
+        <script src="index.js" defer></script>
+        <script src="activity.js" defer></script>
+        <script src="todo.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <h1>Activity Logger</h1>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#todo">To-do</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                    <li><a href="#info">Information</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="intro">
+                <noscript>
+                    <h2>Please enable scripting</h2>
+                    <p>
+                        This is a proper client-side web app, it
+                        will not work unless Javascript is enabled.
+                        You're recommended to save this page (as "Web Page, complete")
+                        and open it on your own device, if you require security.
+                    </p>
+                    <hr>
+                </noscript>
+
+                <p>Select a menu item to proceed.</p>
+            </section>
+
+            <section id="dashboard">
+                <h2>At a glance</h2>
+                <p>
+                    Not implemented yet
+                </p>
+            </section>
+
+            <section id="activities">
+                <h2>Activities</h2>
+                <button id="add-activity-button">Add activity</button>
+
+                <h3>Today</h3>
+                <table id="activity-list">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <h3>Past</h3>
+                <table id="past-activity-list">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <form id="add-activity-form" hidden>
+                    <div>
+                        <button class="close-button">Close</button>
+                        <h3>New Activity</h3>
+                        <fieldset>
+                            <legend>Info</legend>
+                            <div class="form-element">
+                            <label for="activity-title">Title</label>
+                            <input required id="activity-title" name="title">
+                            </div>
+                            <br>
+                            <div class="form-element">
+                            <label for="activity-descriptor">Description</label>
+                            <textarea id="activity-descriptor" name="description"></textarea>
+                            </div>
+                            <br>
+                            <div class="form-element">
+                            <label for="activity-date">Date</label>
+                            <input type="datetime-local" id="activity-date" name="date">
+                            </div>
+                        </fieldset>
+                        <fieldset class="submits-and-hiddens">
+                            <input type="submit" class="submit-button">
+                        </fieldset>
+                    </div>
+                </form>
+
+                <form id="edit-activity-form" hidden>
+                    <div>
+                        <button class="close-button">Close</button>
+                        <h3>Edit Activity</h3>
+                        <fieldset>
+                            <legend>Info</legend>
+                            <div class="form-element">
+                            <label for="edit-activity-title">Title</label>
+                            <input required id="edit-activity-title" name="title">
+                            </div>
+                            <br>
+                            <div class="form-element">
+                            <label for="edit-activity-descriptor">Description</label>
+                            <textarea id="edit-activity-descriptor" name="description"></textarea>
+                            </div>
+                            <br>
+                            <div class="form-element">
+                            <label for="edit-activity-date">Date</label>
+                            <input type="datetime-local" id="edit-activity-date" name="date">
+                            </div>
+                        </fieldset>
+                        <fieldset class="submits-and-hiddens">
+                            <input type="hidden" name="activity" id="edited-activity-id">
+                            <input type="submit" class="submit-button">
+                        </fieldset>
+                    </div>
+                </form>
+
+                <form id="view-activity-form" hidden>
+                    <div>
+                        <button class="close-button">Close</button>
+                        <h3 id="view-activity-title">Activity Title</h3>
+                        <p id="view-activity-description">Activity Description</p>
+                        <p>Logged on <span id="view-activity-date">whatever</span>
+                    </div>
+                </form>
+
+                <form id="delete-activity-form" hidden>
+                    <div>
+                        <h3>Delete Activity</h3>
+                        <p>Are you sure you want to delete this activity?</p>
+                        <fieldset class="submits-and-hiddens">
+                            <input type="hidden" name="activity" id="deleted-activity-id">
+                            <input type="submit" class="submit-button" value="Yes">
+                            <button class="close-button">No</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+
+            <section id="todo">
+                <h2>To-do</h2>
+                <p>
+                    Things due within 7 days are
+                    marked in <strong>yellow</strong>.
+                </p>
+                <button id="add-todo-button">Add to-do</button>
+
+                <h3>Not completed</h3>
+                <table id="todo-list">
+                    <thead>
+                        <tr>
+                            <th>For:</th>
+                            <th>To-do</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <h3>Completed</h3>
+                <table id="completed-todo-list">
+                    <thead>
+                        <tr>
+                            <th>For:</th>
+                            <th>To-do</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <form id="add-todo-form" hidden>
+                    <div>
+                    <button class="close-button">Close</button>
+                    <fieldset>
+                        <legend>Info</legend>
+                        <div class="form-element">
+                        <label for="todo-title">Title</label>
+                        <input id="todo-title" name="title" required>
+                        </div>
+                        <br>
+                        <div class="form-element">
+                        <label for="todo-descriptor">Description</label>
+                        <textarea id="todo-descriptor" name="description"></textarea>
+                        </div>
+                        <br>
+                        <label for="todo-date">Due by</label>
+                        <input type="datetime-local" id="todo-date" name="date">
+                    </fieldset>
+                    <fieldset class="submits-and-hiddens">
+                        <input type="submit" class="submit-button">
+                    </fieldset>
+                    </div>
+                </form>
+                </table>
+
+                <form id="edit-todo-form" hidden>
+                    <div>
+                    <button class="close-button">Close</button>
+                    <fieldset>
+                        <legend>Info</legend>
+                        <div class="form-element">
+                        <label for="edit-todo-title">Title</label>
+                        <input id="edit-todo-title" name="title" required>
+                        </div>
+                        <br>
+                        <div class="form-element">
+                        <label for="edit-todo-descriptor">Description</label>
+                        <textarea id="edit-todo-descriptor" name="description"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-element">
+                        <label for="edit-todo-date">Due by</label>
+                        <input type="datetime-local" id="edit-todo-date" name="date">
+                        </div>
+                    </fieldset>
+                    <fieldset class="submits-and-hiddens">
+                        <input type="hidden" name="todo" id="edited-todo-id">
+                        <input type="submit" class="submit-button">
+                    </fieldset>
+                    </div>
+                </form>
+
+                <form id="view-todo-form" hidden>
+                    <div>
+                        <button class="close-button">Close</button>
+                        <h3 id="view-todo-title">Todo Title</h3>
+                        <p id="view-todo-description">Todo Description</p>
+                        <p>Due by <span id="view-todo-date">--</span>
+                        <p>Completed on <span id="view-todo-completed">--</span>
+                    </div>
+                </form>
+
+                <form id="delete-todo-form" hidden>
+                    <div>
+                        <h3>Delete Todo</h3>
+                        <p>Are you sure you want to delete this todo?</p>
+                        <fieldset class="submits-and-hiddens">
+                            <input type="hidden" name="todo" id="deleted-todo-id">
+                            <input type="submit" class="submit-button" value="Yes">
+                            <button class="close-button">No</button>
+                        </fieldset>
+                    </div>
+                </form>
+
+                <form id="complete-todo-form" hidden>
+                    <div>
+                        <button class="close-button">Close</button>
+                        <h3>Complete Todo</h3>
+                        <p>Completing this to-do will add an activity marking this as complete.</p>
+                        <fieldset class="submits-and-hiddens">
+                            <input type="hidden" name="todo" id="completed-todo-id">
+                            <input type="submit" class="submit-button" value="Yes">
+                            <button class="close-button">No</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+
+            <section id="notes">
+                <h2>Notes</h2>
+                <p>
+                    Not implemented yet
+                </p>
+                <button id="add-note-button" disabled>Add note</button>
+
+                <form id="add-note-form" hidden>
+                    <div>
+                    <button class="close-button">Close</button>
+                    <fieldset>
+                        <legend>Info</legend>
+                        <label for="note-descriptor">Descriptor</label>
+                        <textarea id="note-descriptor" name="note-title"></textarea>
+                    </fieldset>
+                    <fieldset class="submits-and-hiddens">
+                        <input type="submit" class="submit-button">
+                    </fieldset>
+                </form>
+                </div>
+            </section>
+
+            <section id="info">
+                <h2>Information</h2>
+                <p>
+                    TBA
+                </p>
+            </section>
+        </main>
+
+        <ul id="alerts">
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+
+  <head>
+    <title>Anacronistic Modernity</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+    <meta name="author" content="rbsoen"/>
+    <link rel="stylesheet" href="animations.css" media="screen"/>
+    <link rel="stylesheet" href="screen.css" media="screen"/>
+  </head>
+
+  <!--
+    XHTML is essentially restricting myself to a subset of HTML4. Using invalid
+    elements won't cause web browsers to refuse displaying the page but WILL cause
+    a validation error.
+  -->
+  <!--
+    Everything here is strung together using class lists. I know it's not a
+    very good idea, but xhtml disallows data-* and the new html5 attributes.
+
+    Markers:
+      - `_triggerable`: Has a javascript hook on a trigger (e.g. scroll)
+      - `_bindable`: Has a javascript hook on an event
+
+    `_triggerable`:
+      - `_fly-words-in`. Pops up a sentence one word at a time. Arguments:
+        - `_from-left`
+        - `_from-bottom`
+      - `_fade-in`. You must contain block-level elements inside it.
+        - `_slide-from-left`
+        - `_slide-from-right`
+        - `_slide-from-bottom`
+  -->
+  <!--
+    Class name conventions:
+      prefixed with _ = utility / script hooks
+      prefixed with - = local
+      no prefix       = global
+  -->
+  <body>
+    <div id="menu-bar">
+      <h1><a href="#lead">Acme Co.</a></h1>
+      <div class="-mobile" />
+      <ul id="main-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="lead">
+      <div class="-text padded">
+        <h2 class="_triggerable _fly-words-in _from-bottom">
+          Fancy websites shouldn't have to be so complicated.
+        </h2>
+        <div class="_triggerable _fade-in">
+          <p>
+            Reduce overhead by using plain HTML, CSS and Javascript
+            to create a product's or brand's landing page.
+          </p>
+          <div class="fake-button" id="view-src">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="-background-image _triggerable _fade-in">
+        <img src="img/smartphone.jpg" alt="Obligatory generic smartphone image" width="300" />
+      </div>
+      <div class="-bottom" />
+    </div>
+
+    <div class="accented-section" id="about">
+      <div class="padded">
+        <h2 class="_triggerable _fly-words-in _from-bottom">
+          Improving My Understanding
+        </h2>
+        <div class="_triggerable _fade-in _slide-from-bottom">
+          <p>
+            It's never a bad idea to learn more about the inner
+            workings of the web, beyond what brand-name frameworks
+            and methodologies would provide. I may gain appreciation
+            for the history of web technologies and the various
+            compromises it made. In addition, I may leverage
+            HTML more effectively to deliver web pages that are
+            as semantically sensible as they are graphically
+            fantastic.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accented-section">
+      <div class="padded">
+        <h2 class="_triggerable _fly-words-in _from-bottom">
+          Minding Users
+        </h2>
+        <div class="_triggerable _fade-in _slide-from-bottom">
+          <p>
+            In my youth, I had to work on limited quota through mobile
+            data. Not only that, I had a laptop very much limited in
+            resources, only having about 2 GB of RAM. Hence, I know that
+            websites should optimize for that scenario. However there
+            are more aspects that I must optimize other than simply
+            less data usage, because if it were the only thing I care
+            about, I would simply <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minify</a> everything.
+          </p>
+          <p>
+            Accessibility is something to consider when creating a website.
+            At the very least, <a href="https://www.nngroup.com/articles/low-contrast/">contrast issues</a>.
+            As a graphic designer, I admittedly overlook this a lot. However,
+            I think websites need more consideration since they live in
+            small screens be it through a notebook laptop or a smartphone.
+            Another way to complete the accessibility problem is by using semantic tags
+            whenever possible, ensuring that if the website is accessed by
+            something other than a web browser, assistive technologies may
+            accurately convey the contents of the page.
+          </p>
+          <p>
+            Ultimately, a website is made by its' contents. Some measures which
+            may satisfy the developer or the artist may not be desirable to me,
+            a user, who wants to page to just load &mdash; things like loading screens
+            and anti-<abbr title="flash of unstyled content">FOUC</abbr>
+            measures &mdash; must not get in the way of whatever content I want
+            to access.
+          </p>
+          </div>
+          <div class="quote _triggerable _fade-in _slide-from-left">
+            <blockquote>
+              Web users ultimately want to get at data quickly and easily. They don't care as much about attractive sites and pretty design.
+            </blockquote>
+            <cite>Tim Berners-Lee</cite>
+          </div>
+      </div>
+    </div>
+
+    <div class="accented-section" id="benefits">
+      <div class="padded">
+        <h2 class="_triggerable _fly-words-in _from-left">Implementing Design Considerations</h2>
+        <div class="_triggerable _fade-in _slide-from-left">
+          <p>
+            Among the various ideas to define the
+            relationship between HTML markup and CSS layout, one that I tend
+            to agree the most is that CSS design should depend on the
+            associated markup. This is simply due to the fact that graphical
+            web browsers are not the only applications able to parse HTML.
+          </p>
+          <p>
+            I'm aware of the possible issues it may bring when it comes
+            to scaling and maintaining the code, but my opinion is that nothing
+            can't be fixed with adequate documentation.
+            Therefore, I believe a good way of thinking about making websites that
+            fulfill design soundness and user comfort might be as follows:
+          </p>
+        </div>
+        <ul class="card-list _triggerable _fade-in _slide-from-right">
+          <li class="card">
+            <b>Writing the content first</b>, because this is the
+            most important part of any page where content is worth
+            having. I would write the HTML as if I was writing for a
+            command line display.
+          </li>
+          <li class="card">
+            <b>Designing the layout</b>, adjust it around the content.
+            I'd make it attractive, but not in a way that obstructs the
+            content. I try to use the above user-minded considerations.
+          </li>
+          <li class="card">
+            <b>Implementing the layout to the content</b>. This ensures
+            that the site remains reasonably compatible when accessed
+            using any device, while bringing normal users a fast
+            experience.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="features">
+        <div class="-top" />
+        <div class="padded">
+          <div class="row-container">
+            <div class="-image _triggerable _fade-in _slide-from-left">
+              <img src="img/xhtml_error.png" alt="Screenshot of an XML parsing error" width="300" />
+            </div>
+            <div class="_triggerable _fade-in _slide-from-right"><div class="card _triggerable _fade-in">
+              <h3>About XHTML</h3>
+              <p>
+                XHTML was an effort by the W3C to bring
+                <a target="_blank" href="https://www.w3.org/html/wg/wiki/DraconianErrorHandling">strict error handling</a>
+                through the use of the XML parser. It wasn't very popular
+                among developer circles.
+              </p>
+              <div class="fake-button">
+                <a target="_blank" href="https://validator.w3.org/">Validate it here</a>
+              </div>
+            </div></div>
+          </div>
+          <div class="row-container-reversed">
+            <div class="-image _triggerable _fade-in _slide-from-right">
+              <img src="img/code.png" alt="Screenshot of code" width="300" />
+            </div>
+            <div class="_triggerable _fade-in _slide-from-left">
+                <h3>Code tricks</h3>
+                <p>
+                  One benefit of XHTML is leveraging <var>CDATA</var>
+                  to paste code samples without needing to escape anything:
+                </p>
+                <pre><code><![CDATA[
+#include <stdio.h>
+
+int main(){
+  printf("Hello!\n");
+  return 0;
+}
+                  ]]></code></pre>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="section" id="pricing">
+        <div class="padded">
+          <h2 class="_triggerable _fly-words-in _from-bottom">What's the price?</h2>
+          <div class="-lead-text _triggerable _fade-in _slide-from-bottom">
+            Sample plans exist for example client's needs.
+          </div>
+          <div class="price-table">
+            <div class="price-offer _triggerable _fade-in _slide-from-left">
+              <div>
+                <div>
+                  <h3>Starter</h3>
+                  <strong><span>Rp</span>100K</strong> per month
+                </div>
+                <ul>
+                  <li>No credit card needed</li>
+                  <li>1 subdomain</li>
+                  <li>500 MB storage</li>
+                </ul>
+              </div>
+              <div>
+                <div class="fake-button" id="view-src">
+                  <a href="#">Order</a>
+                </div>
+              </div>
+            </div>
+            <div class="price-offer _triggerable _fade-in _slide-from-bottom">
+              <div>
+                <div>
+                  <h3>Pro</h3>
+                  <strong><span>Rp</span>500K</strong> per month
+                </div>
+                <ul>
+                  <li>No credit card needed</li>
+                  <li>3 subdomains</li>
+                  <li>5 GB storage</li>
+                </ul>
+              </div>
+              <div>
+                <div class="fake-button" id="view-src">
+                  <a href="#">Order</a>
+                </div>
+              </div>
+            </div>
+            <div class="price-offer _triggerable _fade-in _slide-from-right">
+              <div>
+                <div>
+                  <h3>Ultimate</h3>
+                  <strong><span>Rp</span>800K</strong> per month
+                </div>
+                <ul>
+                  <li>No credit card needed</li>
+                  <li>10 subdomains</li>
+                  <li>10 GB storage</li>
+                </ul>
+              </div>
+              <div>
+                <div class="fake-button" id="view-src">
+                  <a href="#">Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="footer">
+        <hr />
+          <div class="-container padded">
+            <div>
+              <h2>Footer</h2>
+              <p>
+                Insert something here, like other
+                copy write text or legal disclaimers here...
+              </p>
+              <p>
+                The design of this sample design was very
+                much inspired by the <a href="https://essentials.pixfort.com/original">Pixfort
+                Essentials</a> theme, and aims to write a lighter alternative.
+              </p>
+            </div>
+            <div class="-links">
+              <h3>A big list of links</h3>
+              <ul>
+                <li><a href="javascript:void()">About</a></li>
+                <li><a href="javascript:void()">Contact</a></li>
+                <li><a href="javascript:void()">Blog</a></li>
+                <li><a href="javascript:void()">Whatever</a></li>
+                <li><a href="javascript:void()">Sales</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    <script src="animations.js" type="text/javascript"/>
+  </body>
+
+</html>
