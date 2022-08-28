@@ -16,7 +16,20 @@
     {{- $count := .Count }}
     {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
 		<li>
-		    <a href="{{ .Permalink }}">{{ .Name }} ({{ $count }})</a>
+	   	{{ $Scratch := newScratch }}
+		{{- $Scratch.Set "class" false }}
+		{{- if in .Name "client:" }}
+			{{- $Scratch.Set "class" "-client" }}
+		{{- else if in .Name "tech:" }}
+			{{- $Scratch.Set "class" "-tech" }}
+		{{- else if in .Name "type:" }}
+			{{- $Scratch.Set "class" "-type" }}
+		{{- else if in .Name "visibility:" }}
+			{{- $Scratch.Set "class" "-visibility" }}
+		{{- else if in .Name "year:" }}
+			{{- $Scratch.Set "class" "-year" }}
+		{{- end }}
+		    <a href="{{ .Permalink }}"{{ if ne ($Scratch.Get "class") false }} class="{{ $Scratch.Get "class" }}"{{ end }}>{{ .Name }} ({{ $count }})</a>
 		</li>
     {{- end }}
     {{- end }}

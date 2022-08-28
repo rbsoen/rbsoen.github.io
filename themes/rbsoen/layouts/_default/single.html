@@ -1,5 +1,9 @@
 {{ define "main" }}
 	<section>
+	<ul class="_breadcrumbs">
+		<li><a href="../../">Home</a></li>
+		<li><a href="../">{{ .Section }}</a></li>
+	</ul>
 	<article class="post">
 		<header>
 			<h2><span>{{ .Title }}</span><span> - </span><time datetime="{{ .Date | time.Format "2006-01-02T15:04:05Z07:00" | safeHTMLAttr }}">{{ .Date | time.Format ":date_long" }}</time></h2>

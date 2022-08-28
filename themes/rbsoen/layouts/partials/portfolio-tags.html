@@ -3,7 +3,20 @@
 <ul>
   {{ range .Params.attributes }}
    <li>
-     <a href="{{ "/attributes/" | relLangURL }}{{ . | urlize }}">
+   	{{ $Scratch := newScratch }}
+	{{- $Scratch.Set "class" false }}
+	{{- if in . "client:" }}
+		{{- $Scratch.Set "class" "-client" }}
+	{{- else if in . "tech:" }}
+		{{- $Scratch.Set "class" "-tech" }}
+	{{- else if in . "type:" }}
+		{{- $Scratch.Set "class" "-type" }}
+	{{- else if in . "visibility:" }}
+		{{- $Scratch.Set "class" "-visibility" }}
+	{{- else if in . "year:" }}
+		{{- $Scratch.Set "class" "-year" }}
+	{{- end }}
+     <a href="{{ "/attributes/" | relLangURL }}{{ . | urlize }}"{{ if ne ($Scratch.Get "class") false }} class="{{ $Scratch.Get "class" }}"{{ end }}>
        {{- . -}}
      </a>
    </li>

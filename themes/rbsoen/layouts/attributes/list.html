@@ -1,8 +1,13 @@
 {{ define "main" }}
 	<section>
+	<ul class="_breadcrumbs">
+		<li><a href="../../">Home</a></li>
+		<li><a href="../">{{ .Section }}</a></li>
+	</ul>
 	<h2>
 	{{ .Title }}
 	</h2>
+	
 	{{- .Content -}}
 	
 	<div class="section-items">
