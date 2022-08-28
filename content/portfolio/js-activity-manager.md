@@ -5,6 +5,7 @@
 		"visibility: personal",
 		"type: application",
 		"type: webdev",
+		"tech: javascript",
 		"year: 2022"
 	],
 	

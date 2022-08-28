@@ -4,6 +4,7 @@
 	"attributes": [
 		"visibility: personal",
 		"type: webdev",
+		"tech: javascript",
 		"year: 2021"
 	],
 	
