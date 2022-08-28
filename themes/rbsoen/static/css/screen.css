@@ -36,6 +36,7 @@ body {
 	color: #fff;
 	background-color: #333;
 	background-image: url('/background.svg');
+	overflow: hidden;
 	
 	--header-width: 7em;
 	--reading-width: 72em;
@@ -852,10 +853,11 @@ section#history h3:before {
 @media (max-width: 53em) {
 	main {
 		width: calc(100% - 1em);
-		height: calc(100vh - 6.5em);
+		height: calc(100% - 8em);
 		top: 4.0rem;
 		padding-bottom: 5em;
 		z-index: 0;
+		position: fixed;
 	}
 	
 	section {
@@ -889,6 +891,10 @@ section#history h3:before {
 		display: block;
 	}
 	
+	._tech-stack li {
+		flex-basis: 6em;
+	}
+	
 	/* hide other main-menu */
 	#main-menu:not(:target) li:not(:nth-of-type(1)),
 	#main-menu:target li:nth-of-type(1) {
@@ -900,13 +906,18 @@ section#history h3:before {
 		bottom: 1.25em;
 		left: .5em;
 		z-index: 999;
-		width: 50%;
-		height: 1em;
+		width: 60%;
 		display: flex;
 	}
 	
 	#top > header ._language a {
-		text-align: left;
+		font-size: 0;
+	}
+	
+	#top > header ._language a:after {
+		content: attr(title);
+		font-size: 1rem;
+		line-height: 1rem;
 	}
 	
 	#main-menu:target:before {
@@ -938,10 +949,10 @@ section#history h3:before {
 		position: fixed;
 		display: block;
 		top: unset;
-		left: .5em;
-		width: calc(100% - 1em);
-		bottom: 1.9em;
-		height: 1.6em;
+		left: .4em;
+		width: calc(100% - .8em);
+		bottom: 3em;
+		height: 2em;
 		background: #000;
 		overflow: hidden;
 		font-size: 1em;
@@ -950,7 +961,7 @@ section#history h3:before {
 	}
 	
 	#top > footer address > span:after {
-		content: ' (hover to view)';
+		content: ' (tap to view)';
 	}
 	
 	#top > footer address:hover {
@@ -965,7 +976,7 @@ section#history h3:before {
 		position: fixed;
 		width: 50%;
 		top: unset;
-		bottom: .125em;
+		bottom: .825em;
 		right: .5em;
 		text-align: right;
 		display: block;
@@ -982,7 +993,7 @@ section#history h3:before {
 	
 	#top > header {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
 	}
 	
 	/* "open main menu" */
