@@ -2,7 +2,7 @@
 	"experience": {
 		"education": {
 			"2006 - 2007":
-				{"institution": "Laurel Elementary School"},
+				{"institution": "Laurel Elementary School (Maryland)"},
 			"2008 - 2013":
 				{"institution": "SDN 4 Depok"},
 			"2013 - 2016":
@@ -10,7 +10,7 @@
 			"2016 - 2019":
 				{"institution": "SMAN 3 Depok",
 				"major": "MIPA"},
-			"2019 - sekarang":
+			"2019 - lulus 2023":
 				{"institution": "Universitas Indonesia",
 				"major": "Teknik Komputer"}
 		},
