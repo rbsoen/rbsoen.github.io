@@ -1,0 +1,11 @@
+<article class="summary">
+	<header>
+		<h3><span>{{ .Title }}</span></h3>
+	</header>
+	<div>
+	{{ .Summary }}
+	</div>
+	<footer>
+		<a href="{{ .RelPermalink }}">{{ .Site.Params.ReadMore }}</a>
+	</footer>
+</article>

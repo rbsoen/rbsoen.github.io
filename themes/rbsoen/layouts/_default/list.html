@@ -1,0 +1,24 @@
+{{ define "main" }}
+	<section>
+	<h2>
+	{{ if .CurrentSection.Title}}
+		{{ .CurrentSection.Title }}{{ if ne .Title .CurrentSection.Title}} - {{ .Title }}{{ end }}
+	{{ else }}
+		{{ .Title }}
+	{{ end }}
+	</h2>
+	{{- .Content -}}
+	
+	{{ if eq .Section "blog" }}
+	{{ if le (where .Site.RegularPages "Section" "==" "blog") 2 }}
+	{{ i18n "list.nopages" }}
+	{{ end }}
+	{{ end }}
+	<div class="section-items">
+	{{ range .Paginator.Pages }}
+		{{ .Render "summary" }}
+	{{ end}}
+	</div>
+	{{- partial "pagination.html" . -}}
+	</section>
+{{ end }}

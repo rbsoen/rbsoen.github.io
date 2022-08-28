@@ -1,0 +1,102 @@
+{
+	"DefaultContentLanguage": "en",
+	"baseURL": "http://rbsoen.github.io/",
+	"theme": "rbsoen",
+	"title": "rbsoen",
+	"timeZone": "Asia/Jakarta",
+	"paginate": 8,
+	"menu": {
+		"main": [
+			{
+				"name": "Portfolio",
+				"url": "/portfolio"
+			},
+			{
+				"name": "Blog",
+				"url": "/blog"
+			}
+		]
+	},
+	"taxonomies": {
+		"tag": "tags",
+		"attribute": "attributes"
+	},
+	"params": {
+		"techIWorkWith": [
+			{
+				"title": "Windows",
+				"icon": "win"
+			},
+			{
+				"title": "Linux",
+				"icon": "lin"
+			},
+			{
+				"title": "Docker",
+				"icon": "docker"
+			},
+			{
+				"title": "Bash",
+				"icon": "bash"
+			},
+			{
+				"title": "Git",
+				"icon": "git"
+			},
+			{
+				"title": "HTML",
+				"icon": "html"
+			},
+			{
+				"title": "CSS",
+				"icon": "css"
+			},
+			{
+				"title": "JavaScript",
+				"icon": "js"
+			},
+			{
+				"title": "PHP",
+				"icon": "php"
+			},
+			{
+				"title": "Python",
+				"icon": "python"
+			},
+			{
+				"title": "MariaDB/MySQL",
+				"icon": "mariadb"
+			},
+			{
+				"title": "SQLite",
+				"icon": "sqlite"
+			},
+			{
+				"title": "Inkscape",
+				"icon": "inkscape"
+			},
+			{
+				"title": "Figma",
+				"icon": "figma"
+			},
+			{
+				"title": "Blender",
+				"icon": "blender"
+			}
+		]
+	},
+	"Languages": {
+		"en": {
+			"addrcaption": "Contact:",
+			"viewcaption": "View in English",
+			"languagename": "English",
+			"readmore": "Read on..."
+		},
+		"id": {
+			"addrcaption": "Hubungi:",
+			"viewcaption": "Lihat dalam Bahasa Indonesia",
+			"languagename": "Indonesia",
+			"readmore": "Selengkapnya..."
+		}
+	}
+}

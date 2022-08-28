@@ -1,0 +1,12 @@
+<article class="portfolio-entry"{{ if .Params.Thumbnail }} style="--image: url('{{ .Params.Thumbnail }}')"{{ end }}>
+	<header>
+		<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+		<ul>
+			<li><span>Year: </span><span>{{ if .Params.Year }}{{ .Params.Year }}{{ else }}{{ .Date | time.Format "2006" }}{{ end }}</span></li>
+			<li><span>Client: </span><span>{{ .Params.Client }}</span></li>
+		</ul>
+	</header>
+	<footer>
+		<a href="{{ .RelPermalink }}">View...</a>
+	</footer>
+</article>

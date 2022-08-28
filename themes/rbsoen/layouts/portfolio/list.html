@@ -1,0 +1,17 @@
+{{ define "main" }}
+	<section>
+	<h2>
+	Portfolio of Work
+	</h2>
+	{{- .Content -}}
+	
+	<div class="section-items">
+	{{- $sortedPages := (.Pages.ByParam "year").Reverse }}
+	{{ $paginator := .Paginate $sortedPages }}
+	{{- range $paginator.Pages }}
+		{{ .Render "summary" }}
+	{{ end}}
+	</div>
+	{{- partial "pagination.html" . -}}
+	</section>
+{{ end }}

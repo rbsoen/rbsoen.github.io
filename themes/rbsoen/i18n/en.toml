@@ -1,0 +1,36 @@
+[pagination.title]
+other = "Pages:"
+
+[pagination.firstpage]
+other = "First"
+
+[pagination.prevpage]
+other = "Previous"
+
+[pagination.nextpage]
+other = "Next"
+
+[pagination.lastpage]
+other = "Last"
+
+[readingTime]
+one = "One minute read"
+other = "{{ .Count }} minutes read"
+
+[tags.title]
+other = "Tags:"
+
+[share.title]
+other = "Share this:"
+
+[portfolio.client]
+other = "Client"
+
+[portfolio.contrib]
+other = "Contrib"
+
+[portfolio.tools]
+other = "Software used"
+
+[list.nopages]
+other = "There are currently no entries in this part of the site."

@@ -1,0 +1,24 @@
+{{ define "main" }}
+	<section>
+	<article class="post">
+		<header>
+			<h2><span>{{ .Title }}</span><span> - </span>{{ if .Params.Year }}<time datetime="{{ .Params.Year }}">{{ .Params.Year }}</time>{{ else }}<time datetime="{{ .Date | time.Format "2006-01-02T15:04:05Z07:00" | safeHTMLAttr }}">{{ .Date | time.Format ":date_long" }}</time>{{ end }}</h2>
+			{{- partial "portfolio-tags.html" . -}}
+		</header>
+		<div>
+		<div class="portfolio-info">
+		<h3>Production info</h3>
+		<ul>
+			<li><span>{{ i18n "portfolio.client" }}</span><span>: </span><span>{{ .Params.Client }}</span></li>
+			<li><span>{{ i18n "portfolio.contrib" }}</span><span>: </span><span>{{ .Params.Contrib }}</span></li>
+			<li><span>{{ i18n "portfolio.tools" }}</span><span>: </span><span>{{ .Params.Software }}</span></li>
+		</ul>
+		</div>
+		{{ .Content }}
+		</div>
+		<!--footer>
+			{{- partial "share.html" . -}}
+		</footer-->
+	</article>
+	</section>
+{{ end }}

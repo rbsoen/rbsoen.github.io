@@ -1,0 +1,9 @@
+# Folders we don't want to track
+public/
+resources/
+
+# Vim swap files
+.swp
+
+# Build artifacts
+.hugo_build.lock

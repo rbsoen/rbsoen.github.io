@@ -1,0 +1,22 @@
+<header>
+	<a href="/"><h1>{{ .Site.Title }}</h1></a>
+	<nav id="main-menu">
+		<ul>
+			<li><a href="#main-menu">Open main menu</a></li>
+			{{ range .Site.Menus.main }}
+			<li><a href="{{ .URL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>
+			{{ end }}
+			<li><a href="#top" class="_close-menu">Close menu</a></li>
+			<li class="dark-toggle" hidden aria-hidden="true">
+				<label for="toggle-dark" hidden aria-hidden="true">Toggle dark mode</label>
+			</li>
+		</ul>
+		{{ if .IsTranslated }}
+		<ul class="_language">
+			{{ range .Translations }}
+				<li class="_{{ .Lang }}" lang="{{ .Lang }}"><a href="{{ .RelPermalink }}" title="{{ .Site.Params.ViewCaption }}">{{ .Site.Params.LanguageName }}</a></li>
+			{{ end }}
+		</ul>
+		{{ end }}
+	</nav>
+</header>

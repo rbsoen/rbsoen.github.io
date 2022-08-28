@@ -1,0 +1,11 @@
+<nav id="sharelinks">
+{{ i18n "share.title" }}
+<ul>
+  {{ range .Params.tags }}
+   <li>
+     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+       {{- . -}}
+     </a>
+   </li>
+  {{ end }}
+</nav>

@@ -1,0 +1,12 @@
+<nav id="tags">
+<span>{{ i18n "tags.title" }}</span>
+<ul>
+  {{ range .Params.tags }}
+   <li>
+     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+       {{- . -}}
+     </a>
+   </li>
+  {{ end }}
+</ul>
+</nav>

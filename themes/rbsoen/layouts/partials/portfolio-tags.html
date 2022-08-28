@@ -1,0 +1,12 @@
+<nav id="tags">
+<span>Attributes:</span>
+<ul>
+  {{ range .Params.attributes }}
+   <li>
+     <a href="{{ "/attributes/" | relLangURL }}{{ . | urlize }}">
+       {{- . -}}
+     </a>
+   </li>
+  {{ end }}
+</ul>
+</nav>

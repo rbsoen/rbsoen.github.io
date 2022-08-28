@@ -1,0 +1,115 @@
+{{ define "main" }}
+<section id="home">
+	<h2>Halo!</h2>
+		<img src="/icons/me.png" height=128 alt="Foto saya.">
+		<div>
+		<p class="_lead-para">
+			<span>Halo! Saya</span>
+			<span class="_name">Rodriguez Breil Soenoto</span>
+			<span>...desainer, penggiat teknologi dan penggemar multimedia.</span>
+		</p>
+		<ul class="_button-list">
+			<li><a href="/portfolio" class="button">Lihat karya saya</a></li>
+			<li><a href="/pdf/CV Indonesia.pdf" class="button">Lihat CV saya</a></li>
+		</ul>
+		</div>
+	</section>
+	
+	<section id="about">
+		<h2>Tentang Saya</h2>
+		<p>
+			Sejak kecil, saya memiliki ketertarikan pada komputer dan teknologi pada umumnya, dan mulai membuat program sejak umur 12 tahun. Saya juga tertarik pada desain grafis sekitar waktu yang sama. Sebagai otodidak, saya berusaha untuk mengembangkan keterampilan yang berhubungan dengan ketertarikan saya.
+		</p>
+		<p>
+			Seiring berjalannya waktu, saya mulai mencoba hal-hal lain seperti mengedit video. Tujuan saya ialah membuktikan bahwa saya bisa melakukannya — dengan kualitas terbaik — menggunakan alat apa saja yang tersedia. Selama lima tahun ini, saya menggunakan salah satu distribusi Linux sebagai sistem operasi utama. Hal tersebut merupakan katalis bagi saya untuk menulis program-program kecil untuk membantu tugas saya, dan menyebabkan saya memiliki apresiasi yang lebih tinggi untuk teknologi.
+		</p>
+		<p>
+			Dewasa ini, saya telah membuat banyak karya yang saya rasa memuaskan. Karya-karya tersebut banyak dibantu oleh kode guna meningkatkan kecepatan dan efisiensinya.
+		</p>
+	</section>
+	
+	<section id="skills">
+		<h2>Kemampuan Umum</h2>
+		
+		<div class="section-items">
+			<div>
+				<h3>Desain Grafis</h3>
+				<p>
+					Selama bertahun-tahun, saya telah mengerjakan proyek terkait desain untuk berbagai acara dan organisasi.
+				</p>
+			</div>
+		
+			<div>
+				<h3>Video Editing</h3>
+				<p>
+					Saya juga telah mengerjakan banyak proyek video. Mulai dari animasi hingga pengeditan montase.
+Saya menggunakan berbagai teknik dan efek untuk membuat video saya tetap menarik.
+				</p>
+			</div>
+		
+			<div>
+				<h3>Pengembangan Web</h3>
+				<p>
+					Pekerjaan desain saya juga dapat diperluas ke web, membuat aplikasi web modern dan mudah diakses
+dan situs. Selain HTML dan CSS, saat ini saya memprogram dalam PHP, dan perlahan-lahan meningkatkan Javascript saya.
+				</p>
+			</div>
+			
+			<div>
+				<h3>Pengembangan Aplikasi</h3>
+				<p>
+					Saya sering menggunakan Python untuk membantu saya dalam melakukan pekerjaan saya. Akibatnya, saya agak mahir dalam menggunakan
+itu untuk melakukan tugas-tugas saya. Saya juga cukup mampu dalam mengoperasikan shell Bash dan shell lain yang kompatibel.
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="tools">
+		<h2>Tools Andalan</h2>
+		<ul class="_tech-stack">
+			{{ range $tech := .Site.Params.TechIWorkWith }}
+			<li style="--icon-file: url('/icons/{{ $tech.icon }}.svg')">{{ $tech.title }}</li>
+			{{ end }}
+		</ul>
+	</section>
+	
+	<section id="history">
+		<h2>Riwayat</h2>
+		
+		<div class="section-items">
+			<div>
+				<h3 style="--icon: var(--education-icon)">Pendidikan</h3>
+				<ul class="timeline _education">
+					{{ range $year, $exp := .Params.Experience.Education }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.institution }}</span>{{ if $exp.major }}<span>, jurusan </span><span>{{ $exp.major }}</span>{{ end }}</li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--organization-icon)">Organisasi</h3>
+				<ul class="timeline _organization">
+					{{ range $year, $exp := .Params.Experience.Organizations }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.where }}</span><span>, sebagai </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--staffwork-icon)">Kepanitiaan</h3>
+				<ul class="timeline _staffwork">
+					{{ range $year, $exp := .Params.Experience.Staff }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, </span><span>{{ if $exp.division}}Divisi {{$exp.division}}{{ end }}</span><span> sebagai </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--achievement-icon)">Penghargaan</h3>
+				<ul class="timeline _achievements">
+					{{ range $year, $exp := .Params.Experience.Achievements }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, sebagai </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</section>
+{{ end }}

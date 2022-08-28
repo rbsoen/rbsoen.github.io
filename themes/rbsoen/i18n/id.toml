@@ -1,0 +1,36 @@
+[pagination.title]
+other = "Halaman:"
+
+[pagination.firstpage]
+other = "Pertama"
+
+[pagination.prevpage]
+other = "Sebelumnya"
+
+[pagination.nextpage]
+other = "Selanjutnya"
+
+[pagination.lastpage]
+other = "Terakhir"
+
+[readingTime]
+one = "dibaca satu menit"
+other = "dibaca {{ .Count }} menit"
+
+[tags.title]
+other = "Tagar:"
+
+[share.title]
+other = "Berbagi:"
+
+[portfolio.client]
+other = "Klien"
+
+[portfolio.contrib]
+other = "Kontribusi"
+
+[portfolio.tools]
+other = "Software digunakan"
+
+[list.nopages]
+other = "Saat ini tidak ada entri dalam bagian ini."

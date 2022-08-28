@@ -1,0 +1,26 @@
+{{ define "main" }}
+	<section>
+	<h2>
+	{{ if .CurrentSection.Title}}
+		{{ .CurrentSection.Title }}{{ if ne .Title .CurrentSection.Title}} - {{ .Title }}{{ end }}
+	{{ else }}
+		{{ .Title }}
+	{{ end }}
+	</h2>
+	{{- .Content -}}
+	<nav id="tags">
+	<ul>
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+		<li>
+		    <a href="{{ .Permalink }}">{{ .Name }} ({{ $count }})</a>
+		</li>
+    {{- end }}
+    {{- end }}
+    </ul>
+	</nav>
+	</section>
+{{ end }}

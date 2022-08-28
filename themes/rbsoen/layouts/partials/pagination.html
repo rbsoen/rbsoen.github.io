@@ -1,0 +1,92 @@
+{{- $validFormats := slice "default" "terse" }}
+
+{{- $msg1 := "When passing a map to the internal pagination template, one of the elements must be named 'page', and it must be set to the context of the current page." }}
+{{- $msg2 := "The 'format' specified in the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
+
+{{- $page := . }}
+{{- $format := "terse" }}
+
+{{- if reflect.IsMap . }}
+  {{- with .page }}
+    {{- $page = . }}
+  {{- else }}
+    {{- errorf $msg1 }}
+  {{- end }}
+  {{- with .format }}
+    {{- $format = lower . }}
+  {{- end }}
+{{- end }}
+
+{{- if in $validFormats $format }}
+  {{- if gt $page.Paginator.TotalPages 1 }}
+	<hr>
+    <nav id="pagination">
+		<ul>
+			{{- partial (printf "partials/inline/pagination/%s" $format) $page }}
+      	</ul>
+    </nav>
+  {{- end }}
+{{- else }}
+  {{- errorf $msg2 (delimit $validFormats ", ") }}
+{{- end -}}
+
+{{/* Format: terse
+{{/* --------------------------------------------------------------------- */}}
+{{- define "partials/inline/pagination/terse" }}
+  {{- with .Paginator }}
+    {{- $currentPageNumber := .PageNumber }}
+
+	<li><ul>
+    {{- with .First }}
+      {{- if ne $currentPageNumber .PageNumber }}
+      <li class="_first">
+        <a href="{{ .URL }}" title="{{ i18n "pagination.firstpage" }}"><span>{{ i18n "pagination.firstpage"}}</span></a>
+      </li>
+      {{- end }}
+    {{- end }}
+
+    {{- with .Prev }}
+      <li class="_prev">
+        <a href="{{ .URL }}" title="{{ i18n "pagination.prevpage" }}" rel="previous"><span>{{ i18n "pagination.prevpage"}}</span></a>
+      </li>
+    {{- end }}
+	</ul></li>
+	
+    {{- $slots := 8 }}
+    {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
+    {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
+    {{- if lt (add (sub $end $start) 1) $slots }}
+      {{- $start = math.Max 1 (add (sub $end $slots) 1) }}
+    {{- end }}
+
+	<li><ul>
+    {{- range $k := seq $start $end }}
+      {{- if eq $.Paginator.PageNumber $k }}
+      <li>
+        <span>{{ $k }}</span>
+      </li>
+      {{- else }}
+      <li>
+        <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}">{{ $k }}</a>
+      </li>
+      {{- end }}
+    {{- end }}
+	</ul></li>
+	
+	<li><ul>
+    {{- with .Next }}
+      <li class="_next">
+        <a href="{{ .URL }}" title="{{ i18n "pagination.nextpage" }}" rel="next"><span>{{ i18n "pagination.nextpage"}}</span></a>
+      </li>
+    {{- end }}
+
+    {{- with .Last }}
+      {{- if ne $currentPageNumber .PageNumber }}
+      <li class="_last">
+        <a href="{{ .URL }}" title="{{ i18n "pagination.lastpage" }}"><span>{{ i18n "pagination.lastpage"}}</span></a>
+      </li>
+      {{- end }}
+    </ul></li>
+    {{- end }}
+  {{- end }}
+{{- end -}}

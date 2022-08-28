@@ -1,0 +1,115 @@
+{{ define "main" }}
+<section id="home">
+	<h2>Hello!</h2>
+		<img src="/icons/me.png" height=128 alt="My face.">
+		<div>
+		<p class="_lead-para">
+			<span>Hi! I am</span>
+			<span class="_name">Rodriguez Breil Soenoto</span>
+			<span>...a designer, technology enthusiast, and multimedia artist.</span>
+		</p>
+		<ul class="_button-list">
+			<li><a href="/portfolio" class="button">View my work</a></li>
+			<li><a href="/pdf/CV English.pdf" class="button">View my CV</a></li>
+		</ul>
+		</div>
+	</section>
+	
+	<section id="about">
+		<h2>About Me</h2>
+		<p>
+			I've been interested in computers and technology in general ever since I was a child, having started coding at age 12. I have also been interested in graphic design beginning around the same time. As a self-learner, I strive to be very good in the things that I am interested in.
+		</p>
+		<p>
+			As time goes on, I expanded to other fields like video editing, aiming to prove that I can do it all — at high quality — using any tool available to me. For five years now, Linux distributions have been my preferred daily driver. This decision catalyzes me to learn programming to automate my tasks further, and it increases my appreciation and respect of technology in general.
+		</p>
+		<p>
+			Today, at 21, I have accumulated quite a lot of work that I consider satisfactory, and I often use code to increase efficiency and speed.
+		</p>
+	</section>
+	
+	<section id="skills">
+		<h2>General Skills</h2>
+		
+		<div class="section-items">
+			<div>
+				<h3>Graphic Design</h3>
+				<p>
+					Over the years, I have worked on design-related projects for various events and organizations.
+				</p>
+			</div>
+		
+			<div>
+				<h3>Video Editing</h3>
+				<p>
+					I have also worked on numerous video projects. These range from animation to editing montages.
+					I use a variety of techniques and effects to keep my videos interesting.
+				</p>
+			</div>
+		
+			<div>
+				<h3>Web Development</h3>
+				<p>
+					My design work can extend to the web as well, creating modern and easy-to-access web applications
+					and sites. Aside from HTML and CSS, I am currently programming in PHP, and slowly improving my Javascript.
+				</p>
+			</div>
+			
+			<div>
+				<h3>Application Development</h3>
+				<p>
+					I frequently use Python to assist me in doing my work. As a result, I am somewhat proficient in using
+					it to do my tasks. I am also quite capable in operating the Bash shell and other compatible shells.
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section id="tools">
+		<h2>Tools of the Trade</h2>
+		<ul class="_tech-stack">
+			{{ range $tech := .Site.Params.TechIWorkWith }}
+			<li style="--icon-file: url('/icons/{{ $tech.icon }}.svg')">{{ $tech.title }}</li>
+			{{ end }}
+		</ul>
+	</section>
+	
+	<section id="history">
+		<h2>History</h2>
+		
+		<div class="section-items">
+			<div>
+				<h3 style="--icon: var(--education-icon)">Education</h3>
+				<ul class="timeline _education">
+					{{ range $year, $exp := .Params.Experience.Education }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.institution }}</span>{{ if $exp.major }}<span>, majoring in </span><span>{{ $exp.major }}</span>{{ end }}</li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--organization-icon)">Organizations</h3>
+				<ul class="timeline _organization">
+					{{ range $year, $exp := .Params.Experience.Organizations }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.where }}</span><span>, as </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--staffwork-icon)">Staffwork</h3>
+				<ul class="timeline _staffwork">
+					{{ range $year, $exp := .Params.Experience.Staff }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, </span><span>{{ if $exp.division}}{{$exp.division}} Division{{ end }}</span><span> as </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
+				<h3 style="--icon: var(--achievement-icon)">Achievements</h3>
+				<ul class="timeline _achievements">
+					{{ range $year, $exp := .Params.Experience.Achievements }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, as </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</section>
+{{ end }}
