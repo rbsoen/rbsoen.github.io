@@ -4,6 +4,9 @@
 	{{ $title := print .Title " - " .Site.Title }}
 	{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 	<title>{{ $title }}</title>
+	<meta property="og:site_name" content="Rodriguez Breil S.">
+	<meta property="og:image" content="{{ .Site.BaseURL }}icons/me.png">
+	<meta name="description" content="My personal site.">
 	<link rel="stylesheet" media="screen" href="/css/screen.css">
 	<link rel="stylesheet" media="print" href="/css/print.css">
 </head>
