@@ -4,11 +4,14 @@
     <body>
 		<div id="top">
 			<input type="checkbox" id="toggle-dark" hidden aria-hidden="true">
+			{{ $js := resources.Get "js/color-scheme.ts" | js.Build }}
+			<script src="{{ $js.Permalink }}"></script> <!-- ensures no flashing color scheme -->
         	{{- partial "header.html" . -}}
         	<main>
         	{{- block "main" . }}{{- end }}
         	</main>
         	{{- partial "footer.html" . -}}
+			{{- block "script-extras" . }}{{- end }}
 		</div>
     </body>
 </html>
