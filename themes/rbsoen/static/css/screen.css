@@ -235,10 +235,12 @@ ul, ol {
 	display: flex;
 	margin-left: 0;
 	list-style: none;
+	flex-wrap: wrap;
 }
 
 ._button-list > * {
 	margin-right: 1em;
+	margin-bottom: 1em;
 }
 
 ._button-list > *:last-of-type {
@@ -480,7 +482,7 @@ section#home h2 {
 
 section#home > div {
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	transform: translateY(-50%);
 }
 
@@ -574,11 +576,15 @@ section h2 {
 section#home img {
 	position: absolute;
 	bottom: 0;
-	min-height: 24em;
+	min-height: 20em;
 	height: 55%;
 	object-fit: cover;
 	right: 1em;
 	user-select: none;
+}
+
+section#home ._button-list {
+	width: 60%;
 }
 
 section#history h3 {
