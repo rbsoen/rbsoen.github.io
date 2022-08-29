@@ -4,7 +4,7 @@
     <body>
 		<div id="top">
 			<input type="checkbox" id="toggle-dark" hidden aria-hidden="true">
-			{{ $js := resources.Get "js/color-scheme.ts" | js.Build }}
+			{{ $js := resources.Get "js/color-scheme.ts" | js.Build | minify }}
 			<script src="{{ $js.Permalink }}"></script> <!-- ensures no flashing color scheme -->
         	{{- partial "header.html" . -}}
         	<main>
