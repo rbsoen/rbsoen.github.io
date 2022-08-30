@@ -17,6 +17,11 @@
 			}
 		]
 	},
+	"services": {
+		"youtube": {
+			"privacyEnhanced": true
+		}
+	},
 	"taxonomies": {
 		"tag": "tags",
 		"attribute": "attributes"
