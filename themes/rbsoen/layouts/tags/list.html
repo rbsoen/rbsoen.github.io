@@ -1,0 +1,30 @@
+{{ define "main" }}
+	<section>
+	{{ if eq .Section "tags" }}
+	<ul class="_breadcrumbs">
+		<li><a href="../../blog/">Blog</a></li>
+		<li><a href="../">{{ .Section }}</a></li>
+	</ul>
+	{{ end }}
+	<h2>
+	{{ if .CurrentSection.Title}}
+		{{ .CurrentSection.Title }}{{ if ne .Title .CurrentSection.Title}} - {{ .Title }}{{ end }}
+	{{ else }}
+		{{ .Title }}
+	{{ end }}
+	</h2>
+	{{- .Content -}}
+	
+	{{ if eq .Section "blog" }}
+	{{ if le (where .Site.RegularPages "Section" "==" "blog") 0 }}
+	{{ i18n "list.nopages" }}
+	{{ end }}
+	{{ end }}
+	<div class="section-items">
+	{{ range .Paginator.Pages }}
+		{{ .Render "summary" }}
+	{{ end}}
+	</div>
+	{{- partial "pagination.html" . -}}
+	</section>
+{{ end }}

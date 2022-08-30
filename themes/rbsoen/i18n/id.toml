@@ -34,3 +34,6 @@ other = "Software digunakan"
 
 [list.nopages]
 other = "Saat ini tidak ada entri dalam bagian ini."
+
+[list.alltags]
+other = "Lihat semua "

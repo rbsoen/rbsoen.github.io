@@ -14,8 +14,8 @@ other = "Next"
 other = "Last"
 
 [readingTime]
-one = "One minute read"
-other = "{{ .Count }} minutes read"
+one = "a one minute read"
+other = "a {{ .Count }} minute read"
 
 [tags.title]
 other = "Tags:"
@@ -34,3 +34,6 @@ other = "Software used"
 
 [list.nopages]
 other = "There are currently no entries in this part of the site."
+
+[list.alltags]
+other = "View all "

@@ -337,13 +337,14 @@ ul, ol {
 }
 
 p {
-	margin: .5em 0;
+	margin: 1em 0;
 }
 
 .section-items {
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
 	grid-gap: 1em;
+	margin-top: 1em;
 }
 
 .timeline li {
@@ -448,12 +449,13 @@ section:first-of-type > h2:first-of-type,
 	line-height: 1.5;
 }
 
-.post ul {
-	margin-bottom: 1em;
-}
-
 .post h2, .post h3 {
 	margin-top: 1em;
+}
+
+.post p {
+	letter-spacing: .015em;
+	margin: 1.5em 0;
 }
 
 [title="YouTube Video"] {
@@ -1070,6 +1072,10 @@ section > ._breadcrumbs a:hover, section > ._breadcrumbs a:active {
 		display: block;
 		padding: 0.35em 0.15em;
 		border-radius: 0.4em;
+	}
+
+	section#home ._button-list {
+		width: 100%;
 	}
 }
 
