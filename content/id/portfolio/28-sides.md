@@ -29,4 +29,4 @@ Dipublikasi dengan nama "Keluku", dimana saya berencana untuk menggunakan alias 
 
 *Sangat* terinspirasi soundtrack untuk OWL Reborn: Crosslions - Reborn.
 
-Menggunakan sample dari gamelan sample pack, Martin Garrix - Tremor (sampled lead), O.T. Genasis - Coco, Eta Terangkanlah
+Menggunakan sample dari gamelan sample pack, Martin Garrix - Tremor (sampled lead), O.T. Genasis - Coco, Eta Terangkanlah, Imaginesia by BHATARA Ethnic Band

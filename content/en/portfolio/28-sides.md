@@ -29,4 +29,4 @@ Published under "Keluku", an alias I planned to use for music productions (but n
 
 *Heavily* inspired by the main theme for OWL Reborn: Crosslions - Reborn.
 
-Uses samples from a gamelan sample pack, Martin Garrix - Tremor (sampled lead), O.T. Genasis - Coco, Eta Terangkanlah
+Uses samples from a gamelan sample pack, Martin Garrix - Tremor (sampled lead), O.T. Genasis - Coco, Eta Terangkanlah, Imaginesia by BHATARA Ethnic Band
