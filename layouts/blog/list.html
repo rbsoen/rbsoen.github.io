@@ -19,7 +19,7 @@
 		{{ if le (where .Site.RegularPages "Section" "==" "blog") 0 }}
 			{{ i18n "list.nopages" }}
 		{{ else }}
-			{{ i18n "list.alltags" }} <a href="../tags/">tags...</a>
+			{{ i18n "list.alltags" }} <a href="{{ "/tags/" | relLangURL }}">tags...</a>
 			<div class="section-items">
 			{{ range .Paginator.Pages }}
 				{{ .Render "summary" }}

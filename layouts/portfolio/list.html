@@ -5,7 +5,7 @@
 	</h2>
 	{{- .Content -}}
 	
-	{{ i18n "list.alltags" }} <a href="../attributes/">{{ i18n "list.attributeName" }}...</a>
+	{{ i18n "list.alltags" }} <a href="{{ "/attributes/" | relLangURL }}">{{ i18n "list.attributeName" }}...</a>
 	
 	<div class="section-items">
 	{{- $sortedPages := (.Pages.ByParam "year").Reverse }}
