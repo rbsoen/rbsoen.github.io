@@ -37,3 +37,6 @@ other = "There are currently no entries in this part of the site."
 
 [list.alltags]
 other = "View all "
+
+[list.attributeName]
+other = "attributes"

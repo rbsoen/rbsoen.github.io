@@ -37,3 +37,6 @@ other = "Saat ini tidak ada entri dalam bagian ini."
 
 [list.alltags]
 other = "Lihat semua "
+
+[list.attributeName]
+other = "atribut"
