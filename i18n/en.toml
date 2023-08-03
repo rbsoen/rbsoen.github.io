@@ -27,7 +27,7 @@ other = "Share this:"
 other = "Client"
 
 [portfolio.contrib]
-other = "Contrib"
+other = "Contribution"
 
 [portfolio.tools]
 other = "Software used"
