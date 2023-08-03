@@ -1,7 +1,6 @@
 {
 	"DefaultContentLanguage": "en",
 	"baseURL": "http://rbsoen.github.io/",
-	"theme": "rbsoen",
 	"title": "rbsoen",
 	"timeZone": "Asia/Jakarta",
 	"paginate": 8,
