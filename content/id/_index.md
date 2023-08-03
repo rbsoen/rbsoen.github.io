@@ -14,6 +14,16 @@
 				{"institution": "Universitas Indonesia",
 				"major": "Teknik Komputer"}
 		},
+		"work": {
+			"2022":
+				{"in": "DTE FTUI",
+				"division": "Proyek LPDP Rispro — Prof. Kalamullah Ramli",
+				"as": "Asisten Periset"},
+			"2023":
+				{"in": "DTE FTUI",
+				"division": "Proyek Olah Data — Dr. Ruki Harwahyu",
+				"as": "Periset"}
+		},
 		"organizations": {
 			"2013 – 2016":
 				{"where": "Math Club SMPN 1 Depok",

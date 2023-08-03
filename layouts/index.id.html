@@ -96,6 +96,14 @@ itu untuk melakukan tugas-tugas saya. Saya juga cukup mampu dalam mengoperasikan
 				</ul>
 			</div>
 			<div>
+				<h3 style="--icon: var(--staffwork-icon)">Pengalaman Kerja</h3>
+				<ul class="timeline _staffwork">
+					{{ range $year, $exp := .Params.Experience.Work }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, </span><span>{{ if $exp.division}}{{$exp.division}}{{ end }}</span><span> as </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
 				<h3 style="--icon: var(--staffwork-icon)">Kepanitiaan</h3>
 				<ul class="timeline _staffwork">
 					{{ range $year, $exp := .Params.Experience.Staff }}

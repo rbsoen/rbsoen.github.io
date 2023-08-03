@@ -96,6 +96,14 @@
 				</ul>
 			</div>
 			<div>
+				<h3 style="--icon: var(--staffwork-icon)">Work Experience</h3>
+				<ul class="timeline _staffwork">
+					{{ range $year, $exp := .Params.Experience.Work }}
+					<li><b>{{ $year }}</b><span>:</span> <span>{{ $exp.in }}</span><span>, </span><span>{{ if $exp.division}}{{$exp.division}}{{ end }}</span><span> as </span><span>{{ $exp.as }}</span></li>
+					{{ end }}
+				</ul>
+			</div>
+			<div>
 				<h3 style="--icon: var(--staffwork-icon)">Staffwork</h3>
 				<ul class="timeline _staffwork">
 					{{ range $year, $exp := .Params.Experience.Staff }}
