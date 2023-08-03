@@ -91,21 +91,21 @@
 	},
 	"Languages": {
 		"en": {
+			"contentDir": "content/en",
 			"params": {
 				"addrcaption": "Contact:",
 				"viewcaption": "View in English",
 				"languagename": "English",
-				"readmore": "Read on...",
-				"contentDir": "content/en"
+				"readmore": "Read on..."
 			}
 		},
 		"id": {
+			"contentDir": "content/id",
 			"params": {
 				"addrcaption": "Hubungi:",
 				"viewcaption": "Lihat dalam Bahasa Indonesia",
 				"languagename": "Indonesia",
-				"readmore": "Selengkapnya...",
-				"contentDir": "content/id"
+				"readmore": "Selengkapnya..."
 			}
 		}
 	}
