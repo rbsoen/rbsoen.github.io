@@ -1,5 +1,5 @@
 {
-	"title": "How I made this website",
+	"title": "About this website",
 	"date": "2022-08-30T18:34:05+07:00",
 	"slug": "my-website",
 	"tags": [

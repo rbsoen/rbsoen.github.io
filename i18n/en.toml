@@ -1,17 +1,17 @@
 [pagination.title]
 other = "Pages:"
 
-[pagination.firstpage]
-other = "First"
+[pagination.firstpageTitle]
+other = "First page"
 
-[pagination.prevpage]
-other = "Previous"
+[pagination.prevpageTitle]
+other = "Previous page"
 
-[pagination.nextpage]
-other = "Next"
+[pagination.nextpageTitle]
+other = "Next page"
 
-[pagination.lastpage]
-other = "Last"
+[pagination.lastpageTitle]
+other = "Last page"
 
 [readingTime]
 one = "a one minute read"

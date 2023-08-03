@@ -9,7 +9,7 @@
 		"year: 2022"
 	],
 	
-	"client":   "(hobby app)",
+	"client":   "Aplk. pribadi",
 	"contrib":  "application development",
 	"software": "Text editor",
 	

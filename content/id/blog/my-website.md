@@ -1,5 +1,5 @@
 {
-	"title": "Bagaimana situs ini dibuat",
+	"title": "Tentang situs ini",
 	"date": "2022-08-30T18:34:05+07:00",
 	"slug": "website-saya",
 	"tags": [

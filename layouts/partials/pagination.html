@@ -40,14 +40,14 @@
     {{- with .First }}
       {{- if ne $currentPageNumber .PageNumber }}
       <li class="_first">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.firstpage" }}"><span>{{ i18n "pagination.firstpage"}}</span></a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.firstpageTitle" }}" aria-label="{{ i18n "pagination.firstpageTitle" }}">⏮</a>
       </li>
       {{- end }}
     {{- end }}
 
     {{- with .Prev }}
       <li class="_prev">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.prevpage" }}" rel="previous"><span>{{ i18n "pagination.prevpage"}}</span></a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.prevpageTitle" }}" aria-label="{{ i18n "pagination.prevpageTitle" }}" rel="previous">⏴</a>
       </li>
     {{- end }}
 	</ul></li>
@@ -76,14 +76,14 @@
 	<li><ul>
     {{- with .Next }}
       <li class="_next">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.nextpage" }}" rel="next"><span>{{ i18n "pagination.nextpage"}}</span></a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.nextpageTitle" }}" aria-label="{{ i18n "pagination.nextpageTitle" }}" rel="next">⏵</a>
       </li>
     {{- end }}
 
     {{- with .Last }}
       {{- if ne $currentPageNumber .PageNumber }}
       <li class="_last">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.lastpage" }}"><span>{{ i18n "pagination.lastpage"}}</span></a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.lastpageTitle" }}" aria-label="{{ i18n "pagination.lastpageTitle" }}">⏭</a>
       </li>
       {{- end }}
     </ul></li>

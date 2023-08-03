@@ -716,26 +716,27 @@ section#history h3:before {
 .portfolio-entry ul {
 	list-style: none;
 	margin: 0;
-	opacity: .7;
+	opacity: 1;
 }
 
-.portfolio-entry li:nth-of-type(1) {
-	background: #fff;
+.portfolio-entry li:nth-of-type(1) { /* year */
+	background: rgba(255,255,255,.8);
 	color: #000;
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: .5em 1em;
+	padding: .25em 1em;
 	font-weight: bold;
 	border-radius: 0 0 1em 0;
 }
 
-.portfolio-entry li span:first-of-type {
+.portfolio-entry li span:first-of-type { /* "year" (invisible) */
 	font-size: 0;
 }
 
-.portfolio-entry li:nth-of-type(2) {
+.portfolio-entry li:nth-of-type(2) { /* item description */
 	letter-spacing: .02em;
+	opacity: .75;
 }
 
 #pagination {
@@ -786,15 +787,17 @@ section#history h3:before {
 }
 
 #pagination ._first > a, 
+#pagination ._prev > a,
+#pagination ._next > a,
 #pagination ._last > a {
-	background-color: #aaa;
+	padding: .1em;
+	background: none;
+	font-size: 1.5em;
+	color: var(--main-fg-color);
 }
 
-#pagination ._first,
-#pagination ._prev,
-#pagination ._next,
-#pagination ._last {
-	font-size: .8em;
+#pagination ._first > a, 
+#pagination ._last > a {
 }
 
 #tags ul {
@@ -840,7 +843,7 @@ section#history h3:before {
 	letter-spacing: -.05em;
 	font-size: .9em;
 	min-width: 10em;
-	width: 10em;
+	width: 14em;
 	display: block;
 }
 

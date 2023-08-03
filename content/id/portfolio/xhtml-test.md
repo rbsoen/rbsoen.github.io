@@ -8,7 +8,7 @@
 		"year: 2021"
 	],
 	
-	"client":   "(hobby app)",
+	"client":   "Aplk. pribadi",
 	"contrib":  "application development",
 	"software": "Text editor",
 	

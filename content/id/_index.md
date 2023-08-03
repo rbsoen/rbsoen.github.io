@@ -1,33 +1,33 @@
 {
 	"experience": {
 		"education": {
-			"2006 - 2007":
+			"2006 – 2007":
 				{"institution": "Laurel Elementary School (Maryland)"},
-			"2008 - 2013":
+			"2008 – 2013":
 				{"institution": "SDN 4 Depok"},
-			"2013 - 2016":
+			"2013 – 2016":
 				{"institution": "SMPN 1 Depok"},
-			"2016 - 2019":
+			"2016 – 2019":
 				{"institution": "SMAN 3 Depok",
 				"major": "MIPA"},
-			"2019 - lulus 2023":
+			"2019 –2023":
 				{"institution": "Universitas Indonesia",
 				"major": "Teknik Komputer"}
 		},
 		"organizations": {
-			"2013 - 2016":
+			"2013 – 2016":
 				{"where": "Math Club SMPN 1 Depok",
 				"as": "Anggota"},
-			"2016 - 2019":
+			"2016 – 2019":
 				{"where": "Club of Science and Social SMAN 3 Depok",
 				"as": "Sekretaris Umum"},
-			"2019 - sekarang":
+			"2019 – sekarang":
 				{"where": "Sinematografi UI",
 				"as": "Anggota"},
-			"2020 - sekarang":
+			"2020 – sekarang":
 				{"where": "UI Robotics Team / Ashvara",
 				"as": "Programmer"},
-			"2021 - sekarang":
+			"2021 – sekarang":
 				{"where": "NetIC FTUI",
 				"as": "Anggota"}
 		},

@@ -9,7 +9,7 @@
 		"year: 2022"
 	],
 	
-	"client":   "(hobby app)",
+	"client":   "Hobby app",
 	"contrib":  "application development",
 	"software": "Text editor",
 	

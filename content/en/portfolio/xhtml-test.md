@@ -8,7 +8,7 @@
 		"year: 2021"
 	],
 	
-	"client":   "(hobby app)",
+	"client":   "Hobby app",
 	"contrib":  "application development",
 	"software": "Text editor",
 	

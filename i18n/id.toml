@@ -1,17 +1,17 @@
 [pagination.title]
 other = "Halaman:"
 
-[pagination.firstpage]
-other = "Pertama"
+[pagination.firstpageTitle]
+other = "Halaman pertama"
 
-[pagination.prevpage]
-other = "Sebelumnya"
+[pagination.prevpageTitle]
+other = "Halaman sebelumnya"
 
-[pagination.nextpage]
-other = "Selanjutnya"
+[pagination.nextpageTitle]
+other = "Halaman berikutnya"
 
-[pagination.lastpage]
-other = "Terakhir"
+[pagination.lastpageTitle]
+other = "Halaman terakhir"
 
 [readingTime]
 one = "dibaca satu menit"
