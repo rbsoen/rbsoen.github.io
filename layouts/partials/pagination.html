@@ -47,7 +47,7 @@
 
     {{- with .Prev }}
       <li class="_prev">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.prevpageTitle" }}" aria-label="{{ i18n "pagination.prevpageTitle" }}" rel="previous">⏴</a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.prevpageTitle" }}" aria-label="{{ i18n "pagination.prevpageTitle" }}" rel="previous">◀</a>
       </li>
     {{- end }}
 	</ul></li>
@@ -76,7 +76,7 @@
 	<li><ul>
     {{- with .Next }}
       <li class="_next">
-        <a href="{{ .URL }}" title="{{ i18n "pagination.nextpageTitle" }}" aria-label="{{ i18n "pagination.nextpageTitle" }}" rel="next">⏵</a>
+        <a href="{{ .URL }}" title="{{ i18n "pagination.nextpageTitle" }}" aria-label="{{ i18n "pagination.nextpageTitle" }}" rel="next">▶</a>
       </li>
     {{- end }}
 
