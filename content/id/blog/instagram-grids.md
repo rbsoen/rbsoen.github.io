@@ -65,7 +65,7 @@ Untuk membantu memvisualisasikan batas-batas postingan, saya menyetel grid 1000&
 
 Selain itu, mungkin tak banyak hal khusus yang dilakukan di sini. Jika sudah selesai, saya ekspor kanvas penuh.
 
-### Splitting the image
+### Memotong gambar kecil-kecil
 
 {{< figure width="500"
 	src= "/img/blog/convert-images-root-folder.png"
@@ -88,7 +88,7 @@ Dengan asumsi saya punya gambar 3000&times;1000, ini akan menghasilkan 3 file da
 	target="_blank"
 >}}
 
-### Overlaying the images on top of the template
+### Menempelkan di atas template
 
 Saya punya `template.png` dimana setiap gambar kecil akan ditempelkan tepat di tengah-tengah. Misalkan salah satu gambar dari langkah sebelumnya:
 ```sh
