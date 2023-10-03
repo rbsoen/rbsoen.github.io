@@ -16,6 +16,12 @@
 	"thumbnail": "/img/thumbnails/kerinci22.jpg"
 }
 
+![](/img/thumbnails/kerinci22.jpg)
+
+{{< link-button url="https://front-end-kerinci.vercel.app/" text="View application" >}}
+{{< link-button url="https://github.com/cf14-now-you-see-me/FrontEnd" text="Front end code" >}}
+{{< link-button url="https://github.com/cf14-now-you-see-me/BackEnd" text="Back end code" >}}
+
 This was a team submission for the AI Innovation Challenge in the 2022 edition of [Compfest](https://www.compfest.id/) (held by
 the Faculty of Computer Science, Universitas Indonesia).
 
@@ -29,9 +35,3 @@ however this front end UI can still be viewed in limited capacity. The applicati
 
 The front end is driven by React.js and makes use of Tailwind CSS, while the back end is managed in Django.
 The recommendation engine uses scikit-learn for K-means fitting and Sastrawi to stem words for tokenization.
-
-{{< link-button url="https://front-end-kerinci.vercel.app/" text="View application" >}}
-{{< link-button url="https://github.com/cf14-now-you-see-me/FrontEnd" text="Front end code" >}}
-{{< link-button url="https://github.com/cf14-now-you-see-me/BackEnd" text="Back end code" >}}
-
-![](/img/thumbnails/kerinci22.jpg)

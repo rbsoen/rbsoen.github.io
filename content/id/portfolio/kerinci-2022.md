@@ -16,6 +16,12 @@
 	"thumbnail": "/img/thumbnails/kerinci22.jpg"
 }
 
+![](/img/thumbnails/kerinci22.jpg)
+
+{{< link-button url="https://front-end-kerinci.vercel.app/" text="Lihat aplikasi" >}}
+{{< link-button url="https://github.com/cf14-now-you-see-me/FrontEnd" text="Kode front end" >}}
+{{< link-button url="https://github.com/cf14-now-you-see-me/BackEnd" text="Kode back end" >}}
+
 Ini merupakan submisi tim untuk lomba AI Innovation Challenge pada [Compfest](https://www.compfest.id/) tahun 2022 (diselenggarakan
 oleh Fakultas Ilmu Komputer, Universitas Indonesia).
 
@@ -30,9 +36,3 @@ meskipun kemampuannya sangat terbatas. Aplikasi ini mungkin akan dibuat kontaine
 Front end menggunakan React.js dan Tailwind CSS, sementara back end dikelola menggunakan Django.
 Mesin rekomendasi menggunakan scikit-learn untuk pencocokan K-means, serta Sastrawi untuk melakukan pemotongan kata (*stemming*)
 dalam rangka tokenisasi.
-
-{{< link-button url="https://front-end-kerinci.vercel.app/" text="Lihat aplikasi" >}}
-{{< link-button url="https://github.com/cf14-now-you-see-me/FrontEnd" text="Kode front end" >}}
-{{< link-button url="https://github.com/cf14-now-you-see-me/BackEnd" text="Kode back end" >}}
-
-![](/img/thumbnails/kerinci22.jpg)
