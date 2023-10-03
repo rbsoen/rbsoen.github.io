@@ -9,7 +9,7 @@
 	],
 	
 	"client":   "Sekelas.net",
-	"contrib":  "desain grafis",
+	"contrib":  "graphic design",
 	"software": "Figma, Inkscape",
 	
 	"thumbnail": "/img/thumbnails/sekelas_overview.jpg"
