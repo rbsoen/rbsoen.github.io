@@ -1,6 +1,6 @@
 {
 	"year": "2021",
-	"title": "\"Sekelas.net\" cover design",
+	"title": "\"Sekelas.net\" design",
 	"attributes": [
 		"visibility: published",
 		"type: look and feel",
@@ -20,5 +20,7 @@ Sekelas (initially named Nodes) was a startup founded in 2020 by Rezaldy AM. It 
 My contributions include cover designs and several elements of the website design, unified under an exciting design language.
 
 ![](/img/thumbnails/sekelas_overview.jpg)
+
+![](/img/portfolio/sekelas_forum.jpg)
 
 ![](/img/portfolio/sekelas_notes.jpg)

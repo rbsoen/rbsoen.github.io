@@ -1,6 +1,6 @@
 {
 	"year": "2021",
-	"title": "Tampilan cover \"Sekelas.net\"",
+	"title": "Tampilan \"Sekelas.net\"",
 	"attributes": [
 		"visibility: published",
 		"type: look and feel",
@@ -20,5 +20,7 @@ Sekelas (sebelumnya bernama Nodes) merupakan sebuah usaha rintisan Rezaldy AM ya
 Kontribusi saya antara lain desain cover dan beberapa elemen desain dari website, disatukan dalam suatu pola desain yang menarik.
 
 ![](/img/thumbnails/sekelas_overview.jpg)
+
+![](/img/portfolio/sekelas_forum.jpg)
 
 ![](/img/portfolio/sekelas_notes.jpg)
