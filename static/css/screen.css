@@ -54,6 +54,7 @@ body {
 	font-family: var(--body-font);
 	
 	--main-bg-color: #fff;
+	--pre-bg-color: #eee;
 	--main-fg-color: #222;
 	--link-color: #444;
 	--link-active-color: #f12;
@@ -69,6 +70,7 @@ body {
 
 #toggle-dark:checked ~ * {
 	--main-bg-color: #26262d;
+	--pre-bg-color: #000;
 	--main-fg-color: #fff;
 	--link-color: #ccc;
 	--link-active-color: #f84;
@@ -912,6 +914,34 @@ section > ._breadcrumbs a {
 
 section > ._breadcrumbs a:hover, section > ._breadcrumbs a:active {
 	opacity: 1;
+}
+
+pre {
+	background: var(--pre-bg-color);
+	color: var(--main-fg-color);
+	overflow: auto;
+	padding: .5em 1em;
+	border-radius: 5px;
+	box-shadow: 2px 2px 0 2px var(--main-fg-color);
+	border: 1px solid var(--main-fg-color);
+}
+
+code {
+	background: var(--pre-bg-color);
+	color: var(--main-fg-color);
+	padding: .25em;
+	border-radius: 5px;
+}
+
+pre code {
+	background: unset;
+	color: unset;
+	padding: 0;
+	border-radius: 0;
+}
+
+.highlight pre {
+	color: unset;
 }
 
 @media (max-width: 53em) {
