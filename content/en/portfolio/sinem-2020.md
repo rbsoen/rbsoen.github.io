@@ -4,6 +4,7 @@
 	"attributes": [
 		"visibility: published",
 		"type: instagram",
+		"type: look and feel",
 		"client: sinematografi ui",
 		"year: 2020"
 	],
