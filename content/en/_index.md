@@ -80,7 +80,10 @@
 				"as": "Semifinalist"},
 			"2018":
 				{"in": "Matematika Ria - Pesta Sains Nasional IPB",
-				"as": "Semifinalist"}
+				"as": "Semifinalist"},
+			"2022":
+				{"in": "AI Innovation Challenge - Compfest 14",
+				"as": "Finalist"}
 		}
 	}
 }
