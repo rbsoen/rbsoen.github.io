@@ -17,13 +17,15 @@
 }
 
 This was a team submission for the AI Innovation Challenge in the 2022 edition of [Compfest](https://www.compfest.id/) (held by
-the Faculty of Computer Science, Universitas Indonesia). It was an attempt at creating a recommendation and itinerary
-web app for touring the Kerinci Regency. Only a basic recommendation engine using K-means clustering
-was implemented prior to the contest deadline. The engine operates using the descriptions of the
-tourist destinations. For one destination, the engine returns other destinations with similar descriptions.
+the Faculty of Computer Science, Universitas Indonesia).
+
+This application is a recommendation and itinerary web app for touring the Kerinci Regency. It promotes the tourism potential of
+the regency, which has distinctive but lesser-known destinations.
+The recommendation engine uses **K-means clustering** to determine the similarity of different destinations based
+on their description, with the aim of recommending similar destinations based on mood and needs.
 
 The back end portion (which contains the recommendation engine and main app logic) is no longer online,
-however this front end UI can still be viewed in limited capacity.
+however this front end UI can still be viewed in limited capacity. The application may be containerized soon.
 
 The front end is driven by React.js and makes use of Tailwind CSS, while the back end is managed in Django.
 The recommendation engine uses scikit-learn for K-means fitting and Sastrawi to stem words for tokenization.
