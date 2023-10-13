@@ -50,6 +50,7 @@ body {
 	
 	--email-icon:  url('/icons/envelope.svg');
 	--github-icon:  url('/icons/github.svg');
+	--linkedin-icon:  url('/icons/linkedin.svg');
 	
 	font-family: var(--body-font);
 	
@@ -437,13 +438,13 @@ p {
 	display: block;
 }
 
-.icon-email, .icon-github {
+.icon-email, .icon-github, .icon-linkedin {
 	font-size: 0;
 	margin-right: 1rem;
 	position: relative;
 }
 
-.icon-email:before, .icon-github:before {
+.icon-email:before, .icon-github:before, .icon-linkedin:before {
 	content: '';
 	background-size: 100%;
 	background-position: center;
@@ -456,6 +457,7 @@ p {
 
 .icon-email:before { background-image: var(--email-icon); }
 .icon-github:before { background-image: var(--github-icon); }
+.icon-linkedin:before { background-image: var(--linkedin-icon); }
 
 section:first-of-type > h2:first-of-type,
 .post header h2 {
