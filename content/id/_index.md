@@ -22,7 +22,10 @@
 			"2023":
 				{"in": "DTE FTUI",
 				"division": "Proyek Olah Data — Dr. Ruki Harwahyu",
-				"as": "Periset"}
+				"as": "Periset"},
+			"2023 – sekarang":
+				{"in": "Equnix Business Solutions",
+				"as": "Software Engineer"}
 		},
 		"organizations": {
 			"2013 – 2016":

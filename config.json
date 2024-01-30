@@ -72,6 +72,10 @@
 				"icon": "mariadb"
 			},
 			{
+				"title": "PostgreSQL",
+				"icon": "postgres"
+			},
+			{
 				"title": "SQLite",
 				"icon": "sqlite"
 			},

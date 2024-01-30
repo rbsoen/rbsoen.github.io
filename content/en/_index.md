@@ -22,7 +22,10 @@
 			"2023":
 				{"in": "DTE FTUI",
 				"division": "Data Processing — Dr. Ruki Harwahyu",
-				"as": "Researcher"}
+				"as": "Researcher"},
+			"2023 – present":
+				{"in": "Equnix Business Solutions",
+				"as": "Software Engineer"}
 		},
 		"organizations": {
 			"2013 – 2016":
